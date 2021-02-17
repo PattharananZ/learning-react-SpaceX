@@ -23,7 +23,7 @@ function App() {
         <div className="menu">
           <Breadcrumb>
             <Breadcrumb.Item active>Home</Breadcrumb.Item>
-            <Breadcrumb.Item href="">Rocket</Breadcrumb.Item>
+            <Breadcrumb.Item href="/rocket">Rocket</Breadcrumb.Item>
             <Breadcrumb.Item href="">Launches</Breadcrumb.Item>
           </Breadcrumb>
         </div>
@@ -31,15 +31,16 @@ function App() {
       <Container>
         
       </Container>
-    </div>
+    
     <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/rocket">
             <Rocket />
           </Route>
     </Switch>
+    </div>
     </Router>
 
     
