@@ -24,7 +24,7 @@
   flex-direction: row;
   font-size: calc(10px + 2vmin);
   color: white;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 3em;
 }
@@ -46,10 +46,6 @@
 
 .breadcrumb-item.active{
   color: white !important;
-}
-
-.menu{
-  align-self:center;
 }
 
 .menu a {

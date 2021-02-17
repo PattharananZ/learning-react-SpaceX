@@ -13,7 +13,7 @@ function App() {
         </div>
         <div className="menu">
           <Breadcrumb>
-            <Breadcrumb.Item active>Home</Breadcrumb.Item>
+            <Breadcrumb.Item href="">Home</Breadcrumb.Item>
             <Breadcrumb.Item href="">Rocket</Breadcrumb.Item>
             <Breadcrumb.Item href="">Launches</Breadcrumb.Item>
           </Breadcrumb>
