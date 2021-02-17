@@ -1,0 +1,50 @@
+:root{
+    --color1: #C4C4C4;
+    --color2: #ffffff;
+    --color3: #000000;
+}
+
+.page{
+    background-color: var(--color3);
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+}
+
+.content.page1{
+    background-image: url('./image/bg1.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 5vw;
+}
+
+.content.page1 >*{
+    color: var(--color2);
+}
+
+.img1{
+    height: auto;
+    width: 65vw;
+}
+
+.text-1{
+    text-align: left;
+}
+
+.btn-outline-dark{
+    border-color: var(--color2) !important;
+}
+
+.btn-outline-dark:hover{
+    background-color: var(--color2) !important;
+    color: var(--color3) !important;
+}

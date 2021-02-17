@@ -10,53 +10,52 @@
 
 .App-logo {
   align-self: flex-start;
+  justify-content: flex-start;
   pointer-events: none;
 }
 
 .App-logo .img-logo{
-  width: 30vw;
+  width: 20em;
 }
 
+.App-logo .img-logo:hover{
+  cursor: pointer;
+  filter: opacity(30%);
+}
 
 .App-header {
   background-color: var(--color1);
   display: flex;
   flex-direction: row;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white;
-  justify-content: space-between;
   align-items: center;
   height: 3em;
+  flex:1;
+  justify-content: space-between;
 }
 
-.breadcrumb{
-  padding: 0 !important;
-  background-color: transparent !important;
+.navbar-menu{
   display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.breadcrumb-item{
-  color: black;
-  align-self:center;
+.navbar-item{
+  background-color: var(--color2);
+  color: var(--color3);
+  width: 100%;
+  padding: 0.8em;
 }
 
-.breadcrumb-item+.breadcrumb-item::before{
-  content: '' !important;
+.navbar-item:hover{
+  text-decoration:none;
+  background-color: var(--color3);
+  color: var(--color2);
 }
 
-.breadcrumb-item.active{
-  color: white !important;
-}
-
-.menu a {
-  color: #000000;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-item.is-active{
+  background-color: var(--color3);
+  color: var(--color2);
 }
