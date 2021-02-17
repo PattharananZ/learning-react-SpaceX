@@ -1,0 +1,55 @@
+body{
+    background-color: black !important;
+  }
+
+  .container{
+    margin: 0 !important;
+  }
+  .col-sm-3{
+    height: 25vw;
+  }
+  .Falcon9.col-sm-3 {
+    display: flex;
+    background-color: #000000;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border: black solid 1vw;
+  }
+  .RC-FC9.col-sm-9{
+    display: flex;
+    background-color: #000000;
+    padding: 0;
+  }
+  .rocket-pic{
+      width: 10vw;
+  }
+  .RC-FC9-D{
+      display: flex;
+      flex-direction: column;
+    align-self: center;
+    padding : 2%;
+    flex-grow: 1;
+    align-items: center;
+  }
+  a.buttonS{
+      padding: 1vw;
+  }
+  .button-RK{
+      width: 100%;
+      font-size: 1vw;
+  }
+  .badge {
+    display: flex;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
