@@ -6,16 +6,11 @@ import logo2 from './image/logowhite.png';
 
 const Rocket = () => {
     return (
-        <Container fluid>
+        <div className="page">
             <div className="content page1">
                 <img src={logo2} className="img1" />
                 <span className="text-1">SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</span>
                 <Button variant="outline-dark">Learn More</Button>
-                <div class="box">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
             <div className="content page2">
 
@@ -26,7 +21,7 @@ const Rocket = () => {
             <div className="content page4">
 
             </div>
-        </Container>
+        </div>
     )
 }
 export default Rocket
