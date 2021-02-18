@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './Home';
 import Rocket from './Rocket';
+import Launches from './Launches';
 import FC1over from './FC1-1';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,6 +45,9 @@ function App() {
           </Route>
           <Route path="/overview-fc1">
             <FC1over />
+          </Route>
+          <Route path="/launches">
+            <Launches />
           </Route>
         </Switch>
       </div>
