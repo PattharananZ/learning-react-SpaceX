@@ -8,18 +8,20 @@
     background-color: var(--color3);
     display: flex;
     flex-direction: column;
-}
-
-.content{
-    display: flex;
-    width: 100vw;
-    height: 90vh;
     background-image: url('./image/bg1.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.content{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+}
+
+/* page 1 */
 
 .content.page1{
     justify-content: flex-end;
@@ -44,6 +46,7 @@
     padding-top: 1em;
     padding-bottom: 1em;
     line-height: 1.6;
+    font-size: 0.85em;
 }
 
 .btn-outline-dark{
@@ -51,10 +54,13 @@
     margin-left: 1em;
     width: 180px;
     max-width: 100%;
+}
+.btn-outline-dark.up{
+    color: var(--color2);
     border-color: var(--color2) !important;
 }
 
-.btn-outline-dark:hover{
+.btn-outline-dark.up:hover{
     background-color: var(--color2) !important;
     color: var(--color3) !important;
 }
@@ -100,8 +106,9 @@
 		transform: rotate(45deg) translate(20px, 20px);
 	}
 }
-/* Animation */
+/* End Animation */
 
+/* page 2 */
 .content.page2{
     color: var(--color2);
     text-align: left;
@@ -110,6 +117,7 @@
 
 .row-2{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .col-2{
@@ -130,6 +138,80 @@
     width: 2.5rem;
 }
 
+
+
+  /* page 3 */
+.content.page3{
+    background-color: var(--color2) !important;
+    padding: 5vw;
+}
+
+.page-content{
+    display: flex;
+}
+
+.Left{
+    
+}
+
+.Right{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 1em;
+}
+
+
+.img2{
+    height: 450px;
+}
+
+.topic{
+    font-weight: bolder;
+    font-size: 4em;
+    padding-left: 0.2em;
+}
+
+.bg2{
+    background-color: var(--color3) !important;
+    background-image: url('./image/bg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* page 4 */
+.page4{
+    flex-direction: column;
+    text-align: left;
+    padding: 4em;
+    color: var(--color2) !important;
+}
+
+.topic2{
+    font-weight: bolder;
+    font-size: 5em;
+    padding-left: 0.2em;
+}
+
+.text-2{
+    text-align: left;
+    font-weight: lighter;
+    padding-left: 0.5em;
+    padding-bottom: 1em;
+    line-height: 1.6;
+    font-size: 1.75em;
+}
+
+.footer{
+    justify-items: flex-end;
+    text-align: center !important;
+    font-weight: lighter;
+    font-size: 0.85em;
+    color: var(--color2);
+    padding-bottom: 0.5em;
+}
+
 /* Responsive */
 @media all and (max-width:1000px) {
   }
@@ -138,5 +220,8 @@
   @media all and (max-width:500px) {
       .img1{
           padding-left: 1em;
+      }
+      .img{
+          width: 100vw;
       }
   }
