@@ -15,7 +15,7 @@
 }
 
 .App-logo .img-logo{
-  width: 20em;
+  width: 16rem;
 }
 
 .App-logo .img-logo:hover{
@@ -30,9 +30,10 @@
   font-size: calc(5px + 2vmin);
   color: white;
   align-items: center;
-  height: 3em;
+  height: 3rem;
   flex:1;
   justify-content: space-between;
+  width: 100vw;
 }
 
 .navbar-menu{
@@ -46,7 +47,7 @@
   background-color: var(--color2);
   color: var(--color3);
   width: 100%;
-  padding: 0.8em;
+  padding: 0.8rem;
 }
 
 .navbar-item:hover{
