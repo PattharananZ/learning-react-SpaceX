@@ -50,32 +50,3 @@ body{
     font-size: 1vw;
     
 }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @media screen and (max-width: 769px) {
-    .row{
-      width:85%;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    .row{
-      width:104%;
-    }
-  }
-  @media screen and (max-width: 376px) {
-    .row{
-      width:108%;
-    }
-  }
-  @media screen and (max-width: 326px) {
-    .row{
-      width:117%;
-    }
-  }
