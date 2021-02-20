@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container} from 'react-bootstrap';
 
 const FCover1 = () => {
   const [rockets, setRockets] = useState([])
@@ -15,9 +17,7 @@ const FCover1 = () => {
     [],
   )
   return (
-    <ul>
-      {rockets[0].cost_per_launch}
-    </ul>
+   <Container><p className="text-1">Test</p></Container>
   )
 }
 

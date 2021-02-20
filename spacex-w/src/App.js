@@ -32,14 +32,28 @@ function App() {
             </NavLink>
             </Col>
             <Col className="navbar-menu" sm={2}>
-            <NavDropdown title="Rocket" id="basic-nav-dropdown" activeClassName="is-active" className="navbar-item">
-        <NavDropdown.Item exact to="/rocket">All</NavDropdown.Item>
+              <div class="dropdown-nav">
+                <ul class="menu">
+                  <li class="nav-item">
+                  <a class="nav-link" href="/rocket">Rocket</a>
+                  <div class="dropdown-nav">
+                    <ul class="submenu">
+                      <li class>
+                      <a class="nav-link" href="/launches">Rocket Detail</a>
+                      </li>
+                    </ul>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            {/* <NavDropdown title="Rocket" id="basic-nav-dropdown" activeClassName="is-active" className="navbar-item">
+        <NavDropdown.Item href="/rocket"activeClassName="is-active" className="navbar-item">All</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item exact to="/launches">Rocket Detail</NavDropdown.Item>
-      </NavDropdown>
+        <NavDropdown.Item href="/launches">Rocket Detail</NavDropdown.Item>
+      </NavDropdown> */}
             </Col>
             <Col className="navbar-menu" sm={2}>
-            <NavLink exact to="/launches" activeClassName="is-active" className="navbar-item dropdown">
+            <NavLink exact to="/launches" activeClassName="is-active" className="navbar-item">
               Launches
             </NavLink>
             </Col>
