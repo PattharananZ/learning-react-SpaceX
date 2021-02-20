@@ -12,13 +12,13 @@ import image1 from './image/image1.png';
 import YouTube from 'react-youtube';
 
 const Rocket = () => {
-    const opts = {
-        height: '330',
-        width: '610',
-        playerVars: {
-            autoplay: 1,
-        },
-    };
+    // const opts = {
+    //     height: '2',
+    //     width: '35vw',
+    //     playerVars: {
+    //         autoplay: 1,
+    //     },
+    // };
     return (
         <div className="page">
             <div className="content page1">
@@ -46,7 +46,7 @@ const Rocket = () => {
                         </div>
                     </Col>
                     <Col md="6" sm="12" className="col-6">
-                        <YouTube videoId="Q_s_7iTydYU" opts={opts} />
+                    <iframe frameBorder="0" allowFullScreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/Q_s_7iTydYU?enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost%3A3000&amp;widgetid=3" id="widget2"></iframe>
                     </Col>
                 </Row>
             </div>

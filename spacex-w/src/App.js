@@ -13,7 +13,7 @@ import Launches from './Launches';
 import FC1over from './FC1-1';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Breadcrumb, Image, Container, Col} from 'react-bootstrap';
+import { Breadcrumb, Image, Container, Col, NavDropdown} from 'react-bootstrap';
 
 function App() {
   return (
@@ -32,9 +32,11 @@ function App() {
             </NavLink>
             </Col>
             <Col className="navbar-menu" sm={2}>
-            <NavLink exact to="/rocket" activeClassName="is-active" className="navbar-item dropdown">
-              Rocket
-            </NavLink>
+            <NavDropdown title="Rocket" id="basic-nav-dropdown" activeClassName="is-active" className="navbar-item">
+        <NavDropdown.Item exact to="/rocket">All</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item exact to="/launches">Rocket Detail</NavDropdown.Item>
+      </NavDropdown>
             </Col>
             <Col className="navbar-menu" sm={2}>
             <NavLink exact to="/launches" activeClassName="is-active" className="navbar-item dropdown">

@@ -158,7 +158,7 @@
 .img3{
     height: 25vw;
     padding-left: 0%;
-    padding-right: 50%;
+    padding-right: 70%;
 }
 
 .topic{
@@ -185,8 +185,8 @@
 
 .topic2{
     font-weight: bolder;
-    font-size: 5em;
-    padding-left: 0.2em;
+    font-size: 12vw;
+    
 }
 
 .text-2{
@@ -207,8 +207,12 @@
     padding-bottom: 0.5em;
 }
 iframe#widget2{
-    width: 720px;
-    height: 410px;
+    width: 35vw ;
+    height: 20vw ;
+   }
+iframe#widget4{
+    width: 35vw ;
+    height: 20vw ;
    }
 /* Responsive */
 @media all and (max-width:1000px) {
@@ -223,8 +227,13 @@ iframe#widget2{
           width: 100vw;
       }
   }
+
   @media screen and (max-width: 769px) {
     iframe#widget2{
+        width: 400px;
+        height: 220px;
+       }
+    iframe#widget4{
         width: 400px;
         height: 220px;
        }
@@ -241,14 +250,64 @@ iframe#widget2{
         display: flex;
         flex-direction: column;
     }
-   iframe#widget2{
-    margin-top: 20%;
-    width: 330px;
-    height: 150px;
-   }
+    .col-6{
+        max-width: 100% !important;
+    }
+    iframe#widget4{
+        width: 100vw;
+        height: 50vw;
+       }
+    iframe#widget2{
+        width: 100vw;
+        height: 50vw;
+       }
+   .content.page3{
+    display: flex;
+    flex-direction: column;
+}
+.page-content {
+    flex-direction: column-reverse;
   }
+  .topic {
+    font-weight: bolder;
+    font-size: 2em;
+    padding-left: 0%;
+}
+.text-2{
+    font-size: 1em;
+}
+.btn-outline-dark {
+    margin-left: 0%;
+    margin-top: 5%;
+}
+}
   @media screen and (max-width: 376px) {
-    
+    iframe#widget4{
+        width: 80vw;
+        height: 50vw;
+       }
+    iframe#widget2{
+        width: 80vw;
+        height: 50vw;
+       }
+       .content.page2{
+        display: flex;
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-6{
+        max-width: 100% !important;
+    }
+       .content.page3{
+        display: flex;
+        flex-direction: column;
+    }
+    .page-content {
+        flex-direction: column-reverse;
+      }
   }
   @media screen and (max-width: 326px) {
    

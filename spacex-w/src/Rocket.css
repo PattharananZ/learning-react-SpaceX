@@ -2,8 +2,9 @@ body{
     background-color: black !important;
   }
 
-  .container{
+  .RocketD.container-fluid{
     margin: 0 !important;
+    display: block;
   }
   .col-sm-3{
     height: 25vw;
@@ -62,7 +63,7 @@ body{
   }
   @media screen and (max-width: 769px) {
     .row{
-      width:85%;
+      width:100%;
     }
     .fontSize{
       width: 100%;
@@ -72,7 +73,8 @@ body{
   }
   @media screen and (max-width: 420px) {
     .row{
-      width:104%;
+      width:105%;
+      padding-left: 2%;
     }
     .fontSize{
       width: 100%;
@@ -82,7 +84,7 @@ body{
   }
   @media screen and (max-width: 376px) {
     .row{
-      width:108%;
+      width:104%;
     }
     .fontSize{
       width: 100%;
@@ -92,6 +94,6 @@ body{
   }
   @media screen and (max-width: 326px) {
     .row{
-      width:117%;
+      width:105%;
     }
   }
