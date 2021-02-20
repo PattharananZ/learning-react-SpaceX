@@ -9,13 +9,14 @@
 }
 
 .App-logo {
-  align-self: flex-start;
+  display: flex;
+  align-self: center;
   justify-content: flex-start;
   pointer-events: none;
 }
 
 .App-logo .img-logo{
-  width: 16rem;
+  width: 30vh;
 }
 
 .App-logo .img-logo:hover{
@@ -30,26 +31,33 @@
   font-size: calc(5px + 2vmin);
   color: white;
   align-items: center;
-  height: 3rem;
+
   flex:1;
   justify-content: space-between;
-  width: 100vw;
+
 }
 
 .navbar-menu{
   display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  align-items: center;
+  /* height: 5vh; */
+  /* justify-content: flex-end;
+  align-items: center; */
+  padding: 0% !important;
+
 }
+
 
 .navbar-item{
   background-color: var(--color2);
   color: var(--color3);
   width: 100%;
-  padding: 0.8rem;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
-
+.All-box{
+  background-color: blue;
+  padding: 5%;
+}
 .navbar-item:hover{
   text-decoration:none;
   background-color: var(--color3);
@@ -59,4 +67,10 @@
 .navbar-item.is-active{
   background-color: var(--color3);
   color: var(--color2);
+}
+.container-fluid{
+  padding: 0% !important;
+  width: 100vw;
+  display: flex;
+  margin: 0% !important;
 }

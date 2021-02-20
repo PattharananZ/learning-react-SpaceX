@@ -34,7 +34,7 @@ const Rocket = () => {
 
             <div className="content page2" id="info">
                 <Row className="row-2">
-                    <Col md="6" sm="12" className="col-2 social-content">
+                    <Col md="6" sm="12" className="col-6 social-content">
                         <h3>Space Exploration Technologies Corp. </h3>
                         <span className="text-1">aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk</span>
                         <div className="social">
@@ -45,21 +45,21 @@ const Rocket = () => {
                             <img src={so5} />
                         </div>
                     </Col>
-                    <Col md="6" sm="12" className="col-2">
+                    <Col md="6" sm="12" className="col-6">
                         <YouTube videoId="Q_s_7iTydYU" opts={opts} />
                     </Col>
                 </Row>
             </div>
             <div className="content page3">
                 <div className="page-content">
-                    <div className="Left">
-                        <img src={image1} className="img2" />
-                    </div>
-                    <div className="Right">
+                <Col md="6" sm="12" className="col-6">
+                        <img src={image1} className="img3" />
+                    </Col>
+                    <Col md="6" sm="12" className="col-6">
                         <h2 className="topic">Rocket</h2>
-                        <span className="text-2">THE WORLD’S MOST POWERFUL ROCKET</span>
+                        <span className="text-2">THE WORLD’S MOST POWERFUL ROCKET</span><br></br>
                         <Button variant="outline-dark" to="info">Learn More</Button>
-                    </div>
+                        </Col>
                 </div>
             </div>
             <div className="bg2">

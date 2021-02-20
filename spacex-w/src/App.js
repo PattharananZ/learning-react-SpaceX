@@ -13,29 +13,39 @@ import Launches from './Launches';
 import FC1over from './FC1-1';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Breadcrumb, Image, Container } from 'react-bootstrap';
+import { Breadcrumb, Image, Container, Col} from 'react-bootstrap';
 
 function App() {
   return (
     <Router>
       <div className="App">
+      <Container fluid>
         <header className="App-header">
+        <Col className="navbar-menu"sm={6}>
           <div className="App-logo">
             <Image src={logo1} className="img-logo" />
-          </div>
-          <div className="navbar-menu">
+            </div>
+            </Col>
+            <Col className="navbar-menu"sm={2}>
             <NavLink exact to="/" activeClassName="is-active" className="navbar-item">
               Home
             </NavLink>
+            </Col>
+            <Col className="navbar-menu" sm={2}>
             <NavLink exact to="/rocket" activeClassName="is-active" className="navbar-item dropdown">
               Rocket
             </NavLink>
+            </Col>
+            <Col className="navbar-menu" sm={2}>
             <NavLink exact to="/launches" activeClassName="is-active" className="navbar-item dropdown">
               Launches
             </NavLink>
-          </div>
+            </Col>
+          
+          
+          
         </header>
-
+        </Container>
         <Switch>
           <Route exact path="/">
             <Home />

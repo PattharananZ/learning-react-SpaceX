@@ -14,7 +14,7 @@ body{
     color: #ffffff;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
+    font-size: 3vw;
     border: black solid 1vw;
   }
   .RC-FC9.col-sm-9{
@@ -37,9 +37,10 @@ body{
   a.buttonS{
       padding: 1vw;
   }
-  .button-RK{
+  .fontSize{
       width: 100%;
-      font-size: 1vw;
+      font-size: 100%;
+      color: rgb(255, 255, 255);
   }
   .badge {
     display: flex;
@@ -47,7 +48,7 @@ body{
   .btn-outline-light {
     color: #f8f9fa;
     border-color: #f8f9fa;
-    font-size: 1vw;
+    font-size: 0.7vw;
     
 }
   
@@ -63,16 +64,31 @@ body{
     .row{
       width:85%;
     }
+    .fontSize{
+      width: 100%;
+      font-size: 100%;
+      color: rgb(255, 255, 255);
+  }
   }
   @media screen and (max-width: 420px) {
     .row{
       width:104%;
     }
+    .fontSize{
+      width: 100%;
+      font-size: 50%;
+      color: rgb(255, 255, 255);
+  }
   }
   @media screen and (max-width: 376px) {
     .row{
       width:108%;
     }
+    .fontSize{
+      width: 100%;
+      font-size: 35%;
+      color: rgb(255, 255, 255);
+  }
   }
   @media screen and (max-width: 326px) {
     .row{
