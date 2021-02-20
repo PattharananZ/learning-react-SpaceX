@@ -1,0 +1,59 @@
+:root{
+    --color1: #C4C4C4;
+    --color2: #ffffff;
+    --color3: #000000;
+}
+
+.launches{
+    width: 100vw;
+    margin: auto;
+}
+.text-3{
+    color: var(--color2);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.search{
+    padding: 5vw;
+}
+.col-sm-3{
+    
+}
+.filter-ico > *{
+    width: 1rem;
+}
+.list-group-item{
+    display: flex;
+    
+}
+.list-group-item > *{
+    margin: auto;
+}
+.image-lan{
+    width: 10rem;
+    align-self: center;
+}
+.lan-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-body{
+    padding: 0 !important;
+}
+.detail-lan{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+
+/* Responsive */
+@media all and (max-width:500px) {
+    .card{
+        margin: auto;
+    }
+}
