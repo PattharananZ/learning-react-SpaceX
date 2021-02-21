@@ -36,7 +36,7 @@
 .lan-card{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 .card-body{
     padding: 0 !important;
@@ -62,4 +62,11 @@
 /* Responsive */
 @media all and (max-width:415px) {
    
+}
+@media screen and (max-width: 770px) {
+    .lan-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
