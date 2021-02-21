@@ -56,6 +56,12 @@ function App() {
         </header>
         </Container>
         <Switch>
+          <Route path="/launches/:id">
+            <LaunchesDT />
+          </Route>
+          <Route path="/rocket-detail">
+            <RocketDT />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
@@ -68,12 +74,7 @@ function App() {
           <Route path="/launches">
             <Launches />
           </Route>
-          <Route path="/launches/:id">
-            <LaunchesDT />
-          </Route>
-          <Route path="/rocket-detail">
-            <RocketDT />
-          </Route>
+          
         </Switch>
       </div>
     </Router>

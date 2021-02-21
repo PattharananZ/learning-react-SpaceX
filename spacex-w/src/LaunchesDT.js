@@ -4,9 +4,7 @@ import './LaunchesDT.css';
 import Test from './image/testPNG.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Image, Button, Pagination } from 'react-bootstrap';
-const LaunchesDT = (props) => {
-  const data = props.listData;
-  console.log(props)
+const LaunchesDT = () => {
   const { id } = useParams();
   const [launches, setRockets] = useState([])
   useEffect(
