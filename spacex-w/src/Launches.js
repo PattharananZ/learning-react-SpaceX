@@ -41,7 +41,7 @@ const Launches = () => {
         [],
     )
     const sendtoDetail = (id) =>{
-        his.push('/Launches/'+id)
+        his.push('/launches/'+id)
     }
     const options = [
         { label: 'All', value: "no" },
