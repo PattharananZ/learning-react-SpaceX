@@ -6,7 +6,6 @@ import falcon1 from "./image/OverFC1.png";
 import falcon9 from "./image/FC9-0z.png";
 import falconheavy from "./image/FCHV-0z.png";
 import starship from "./image/starship-0z.png";
-import mainpic from "./pic"
 import overview1 from './image/FC9-0z.png';
 import FirstFC9 from './image/FC9-1z.png';
 import SecondFC9 from './image/FC9-2z.png';
