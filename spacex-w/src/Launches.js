@@ -9,6 +9,7 @@ import * as loadingData from "./loading.json"
 import { useEffect, useState, useMemo } from 'react'
 import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Alert } from 'react-bootstrap'
 import Select from 'react-select'
+import { BIconFileEasel } from 'bootstrap-vue'
 
 // loadingscreen
 // const defaultOptions = {
@@ -23,6 +24,8 @@ import Select from 'react-select'
 const Launches = () => {
     const [launches, setRockets] = useState([])
     const [searchTern, setSearchTern] = useState('')
+    const [searchYear, setSearchYear] = useState('')
+    const [Issuc, setSuc] = useState('')
     // const [loading, setLoading] = useState(false);
     useEffect(
         () => {
@@ -36,11 +39,18 @@ const Launches = () => {
         [],
     )
     const options = [
-        { value: null, label: 'All' },
-        { value: true, label: 'Success' },
-        { value: false, label: 'Failed' },
+        { label: 'All', value: "no" },
+        { label: 'Success', value: true },
+        { label: 'Failed', value: false }
     ]
     const no = "No Detail";
+    const handleBoolChange = (event) => {
+        setSuc(event);
+    };
+    const Boollan = (a) => {
+
+    }
+
     return (
         <div className="launches">
             <Container>
@@ -53,25 +63,32 @@ const Launches = () => {
                             <Form.Control placeholder="Rocket Name" onChange={event => { setSearchTern(event.target.value) }} />
                         </Col>
                         <Col lg={4} xs={5}>
-                            <Form.Control placeholder="Year" />
+                            <Form.Control placeholder="Year" onChange={event => { setSearchYear(event.target.value) }} />
                         </Col>
                         <Col lg={2} xs={2}>
                             <Select
                                 defaultValue={options[0]}
                                 options={options}
+                                value={Issuc}
+                                onChange={handleBoolChange}
                             />
                         </Col>
                     </Form.Row>
                 </Form>
                 <div className="lan-card">
-                    {launches.filter((launche => {
-                        if (searchTern == "") {
-                            return launche
-                        } else if (launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) {
-                            return launche
+                    {launches.filter((launche) => {
+                        if(Issuc.value == "no" || Issuc.value == undefined){
+                            if((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear)){
+                                return launche
+                            }
+                        }else if (Issuc.value == true || Issuc.value == false){
+                            console.log((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success)
+                            if((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success){
+                                return launche
+                            }
                         }
-                    })).map((launche, key) => (
-                        // text.length > 0 ? filterName.map(launche)
+                    }
+                    ).map((launche, key) => (
                         < Card classname="card-detail" style={{ width: '16rem' }} key={key}>
                             <Card.Img variant="top" className="image-lan" src={launche.links.mission_patch == null ? nopic : launche.links.mission_patch} />
                             <Card.Body>
