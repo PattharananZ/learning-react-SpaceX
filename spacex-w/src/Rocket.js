@@ -28,7 +28,7 @@ const Rocket = () => {
   <Row>
     <Col className="Falcon9" sm={3}>
         Falcon 1
-        <Link to="/overview-fc1" class="buttonS">
+        <Link to="/rocket-detail" class="buttonS">
      <Button variant="outline-light" class="button-RK" type="button"> 
           Detail
      </Button>
@@ -60,7 +60,7 @@ const Rocket = () => {
   <Row>
     <Col className="Falcon9" sm={3}>
         Falcon 9
-        <Link to="/overview-fc1" class="buttonS">
+        <Link to="/rocket-detail" class="buttonS">
      <Button variant="outline-light" class="button-RK" type="button"> 
           Detail
      </Button>
@@ -92,7 +92,7 @@ const Rocket = () => {
   <Row>
     <Col className="Falcon9" sm={3}>
         Falcon Heavy
-        <Link to="/overview-fc1" class="buttonS">
+        <Link to="/rocket-detail" class="buttonS">
      <Button variant="outline-light" class="button-RK" type="button"> 
           Detail
      </Button>
@@ -124,7 +124,7 @@ const Rocket = () => {
   <Row>
     <Col className="Falcon9" sm={3}>
         Starship
-        <Link to="/overview-fc1" class="buttonS">
+        <Link to="/rocket-detail" class="buttonS">
      <Button variant="outline-light" class="button-RK" type="button"> 
           Detail
      </Button>

@@ -11,6 +11,8 @@ import Home from './Home';
 import Rocket from './Rocket';
 import Launches from './Launches';
 import FC1over from './FC1-1';
+import LaunchesDT from './LaunchesDT';
+import RocketDT from './RocketDT';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Breadcrumb, Image, Container, Col, NavDropdown} from 'react-bootstrap';
@@ -21,6 +23,8 @@ function App() {
       <div className="App">
       <Container fluid>
         <header className="App-header">
+
+          
         <Col className="navbar-menu"sm={6}>
           <div className="App-logo">
             <Image src={logo1} className="img-logo" />
@@ -32,24 +36,13 @@ function App() {
             </NavLink>
             </Col>
             <Col className="navbar-menu" sm={2}>
-              <div class="dropdown-nav">
-                <ul class="menu">
-                  <li class="nav-item">
-                  <a class="nav-link" href="/rocket">Rocket</a>
-                  <div class="dropdown-nav">
-                    <ul class="submenu">
-                      <li class>
-                      <a class="nav-link" href="/launches">Rocket Detail</a>
-                      </li>
-                    </ul>
-                  </div>
-                  </li>
-                </ul>
-              </div>
-            {/* <NavDropdown title="Rocket" id="basic-nav-dropdown" activeClassName="is-active" className="navbar-item">
+            <NavLink exact to="/rocket" activeClassName="is-active" className="navbar-item">
+              Rocket
+            </NavLink>
+            {/* <NavDropdown title="Rocket" activeClassName="is-active" className="navbar-item" href="/rocket">
         <NavDropdown.Item href="/rocket"activeClassName="is-active" className="navbar-item">All</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="/launches">Rocket Detail</NavDropdown.Item>
+        <NavDropdown.Item href="/launches" activeClassName="is-active" className="navbar-item">Rocket Detail</NavDropdown.Item>
       </NavDropdown> */}
             </Col>
             <Col className="navbar-menu" sm={2}>
@@ -74,6 +67,12 @@ function App() {
           </Route>
           <Route path="/launches">
             <Launches />
+          </Route>
+          <Route path="/launches-detail">
+            <LaunchesDT />
+          </Route>
+          <Route path="/rocket-detail">
+            <RocketDT />
           </Route>
         </Switch>
       </div>
