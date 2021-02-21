@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import './Launches.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import icon1 from './image/filter.png'
@@ -8,8 +8,9 @@ import nopic from './image/nopic.png'
 import * as loadingData from "./loading.json"
 import { useEffect, useState, useMemo } from 'react'
 import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Alert } from 'react-bootstrap'
+import { Link, useHistory } from 'react-router-dom'
 import Select from 'react-select'
-import { BIconFileEasel } from 'bootstrap-vue'
+
 
 // loadingscreen
 // const defaultOptions = {
@@ -38,6 +39,9 @@ const Launches = () => {
         },
         [],
     )
+    const sendtoDetail = (id) =>{
+        useHistory.push('/Launches/'+id)
+    }
     const options = [
         { label: 'All', value: "no" },
         { label: 'Success', value: true },
@@ -47,9 +51,6 @@ const Launches = () => {
     const handleBoolChange = (event) => {
         setSuc(event);
     };
-    const Boollan = (a) => {
-
-    }
 
     return (
         <div className="launches">
@@ -89,7 +90,7 @@ const Launches = () => {
                         }
                     }
                     ).map((launche, key) => (
-                        < Card classname="card-detail" style={{ width: '16rem' }} key={key}>
+                        < Card classname="card-detail" style={{ width: '16rem' }} key={key} onClick={(e)=>{sendtoDetail(launche.flight_number)}}>
                             <Card.Img variant="top" className="image-lan" src={launche.links.mission_patch == null ? nopic : launche.links.mission_patch} />
                             <Card.Body>
                                 <Card.Title >{launche.rocket.rocket_name}</Card.Title>

@@ -68,7 +68,7 @@ function App() {
           <Route path="/launches">
             <Launches />
           </Route>
-          <Route path="/launches-detail">
+          <Route path="/launches/:id">
             <LaunchesDT />
           </Route>
           <Route path="/rocket-detail">
