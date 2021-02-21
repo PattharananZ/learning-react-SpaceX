@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useHistory } from 'react-router-dom';
 import './LaunchesDT.css';
 import Test from './image/testPNG.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row, Image, Button, Pagination } from 'react-bootstrap';
+import nopic from './image/nopic.png'
+import { Container, Col, Row, Image, Button, Pagination, Alert } from 'react-bootstrap';
 const LaunchesDT = () => {
+  
   const { id } = useParams();
+  let his = useHistory()
   const [launches, setRockets] = useState([])
+  const change = (id) => {
+    his.push('/launches/' + id)
+    window.location.reload(false);
+  }
   useEffect(
     () => {
       const fetchRockets = async () => {
-        const response = await fetch('https://api.spacexdata.com/v3/launches' + id)
+        const response = await fetch('https://api.spacexdata.com/v3/launches/' + id)
         const data = await response.json()
         setRockets(data)
       }
@@ -18,6 +25,10 @@ const LaunchesDT = () => {
     },
     [],
   )
+  
+  if (launches.flight_number == null) {
+    return <div></div>;
+  }
   return (
     <Container fluid className="ldt">
       <div id='stars'></div>
@@ -25,8 +36,8 @@ const LaunchesDT = () => {
       <div id='stars3'></div>
       <Row className="LA-DT">
         <Col className="Mission-name" sm={12}>
-          <h1 className="Mission">Mission name</h1>
-          <h4 className="Flight">Flight number :1 | year : 2000</h4>
+          <h1 className="Mission">{launches.mission_name}</h1>
+          <h4 className="Flight">Flight number : {launches.flight_number} | year : {launches.launch_year} </h4>
         </Col>
       </Row>
 
@@ -34,31 +45,30 @@ const LaunchesDT = () => {
         <Row className="LA-DT">
           <Col className="info-launch" sm={6}>
             <h2 className="titleLD">Details</h2>
-    rocket_name <br></br>
-    Type : rocket_type <br></br>
-    Year : launch_year <br></br>
-    Serial : core_serial(first_stage) <br></br>
-    Payload : payloads_id(second) <br></br>
-    Payload-type : payload_type <br></br>
-    Success : launch_success <br></br>
-    Detail : details
-    </Col>
+            {launches.rocket.rocket_name} <br></br>
+    Type : {launches.rocket.rocket_type} <br></br>
+    Year : {launches.launch_year} <br></br>
+    Serial : {launches.rocket.first_stage.cores[0].core_serial} <br></br>
+    Payload : {launches.rocket.second_stage.payloads[0].payload_id} <br></br>
+    Payload-type : {launches.rocket.second_stage.payloads[0].payload_type} <br></br>
+    Success : {launches.launch_success == true ? <Alert variant="success">Success</Alert> : <Alert variant="danger">Failed</Alert>} <br></br>
+    Detail : <span className="detail-lan">{launches.details == null ? "No Detail" : launches.details}</span>
+          </Col>
           <Col className="img-launch" sm={6}>
             <Row className="img-flex">
-              <Image src={Test} className="rocket-pic"></Image>
-              <span class="btn-s"><a href="/rocket-detail" className="linkD">Rocket Detail </a></span>
-
+              <Image src={launches.links.mission_patch == null ? nopic : launches.links.mission_patch} className="rocket-pic"></Image>
+              <span className="btn-s"><a href="/rocket-detail" className="linkD">Rocket Detail </a></span>
             </Row>
           </Col>
         </Row>
       </Container>
       <Row className="ButtonPN">
-        <Col className="Prev" sm={6}>
+        <Col className="Prev" sm={6} onClick={(e)=>{change(Number(id)-1)}}>
           <Pagination>
             <Pagination.Prev />
           </Pagination>
         </Col>
-        <Col className="next" sm={6}>
+        <Col className="next" sm={6} onClick={(e)=>{change(Number(id)+1)}}>
           <Pagination>
             <Pagination.Next />
           </Pagination>

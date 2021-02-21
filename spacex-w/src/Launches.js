@@ -52,7 +52,6 @@ const Launches = () => {
     const handleBoolChange = (event) => {
         setSuc(event);
     };
-
     return (
         <div className="launches">
             <Container>
