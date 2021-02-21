@@ -27,7 +27,9 @@ function App() {
           
         <Col className="navbar-menu"sm={6}>
           <div className="App-logo">
-            <Image src={logo1} className="img-logo" />
+          <a className="logoMain" href="/">
+            <Image src={logo1} className="img-logo"/>
+            </a>
             </div>
             </Col>
             <Col className="navbar-menu"sm={2}>

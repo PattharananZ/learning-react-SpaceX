@@ -9,7 +9,8 @@ body{
   .ldt.container-fluid{
     margin: 0 !important;
     display: block;
-    padding-top: 3vh !important;
+    padding-top: 1vh !important;
+    overflow: hidden;
   }
   
   .rocket-pic{
@@ -19,7 +20,7 @@ body{
       padding:0% !important;
   }
   .Mission{
-      font-size: 5vw;
+      font-size: 4.5vw;
       color: rgb(255, 255, 255);
   }
   .Flight{
@@ -27,6 +28,7 @@ body{
       color: rgb(182, 182, 182);
   }
   .titleLD{
+    padding-top: 1vw;
     font-size: 2.5vw;
     color: rgb(214, 214, 214);
   }
@@ -54,6 +56,7 @@ body{
     padding-left: 5%;
 }
 .info-launch{
+    padding-top: 1vw;
     font-size: 2vw;
     text-align: left;
     color: rgb(129, 129, 129);
@@ -174,7 +177,7 @@ body{
     height: 100%;
   }
 
-  .rev.col-sm-6{
+  .Prev.col-sm-6{
     display: flex;
     flex-direction:row;
     justify-content: flex-start;
@@ -182,7 +185,7 @@ body{
   .next.col-sm-6{
     display: flex;
     flex-direction:row;
-    justify-content:flex-end;
+    justify-content: flex-end;
   }
   .pagination {
     margin-top: -20vw;

@@ -18,7 +18,7 @@
 .content{
     display: flex;
     /* width: 100vw; */
-    height: 90vh;
+    height: 100vh;
 }
 
 /* page 1 */
@@ -113,6 +113,7 @@
     color: var(--color2);
     text-align: left;
     padding: 5vw;
+    padding-top: 15vw;
 }
 
 .row-2{
