@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './Rocket.css';
 import overview1 from './image/FC9-0z.png';
 import FirstFC9 from './image/FC9-1z.png';
@@ -23,16 +23,18 @@ import EngineFC1 from './image/EngineFC1.png';
 
 import {Container, Col, Row, Image, Button} from 'react-bootstrap';
 const Rocket = () => {
+    let his = useHistory()
+    const sendtoDetail = (id) =>{
+        his.push('/rocket/'+id)
+    }
     return(
         <Container fluid className="RocketD">
   <Row>
     <Col className="Falcon9" sm={3}>
         Falcon 1
-        <Link to="/rocket-detail" class="buttonS">
-     <Button variant="outline-light" class="button-RK" type="button"> 
+     <Button class="buttonS" variant="outline-light" class="button-RK" type="button" onClick={(e)=>{sendtoDetail("falcon1")}}> 
           Detail
      </Button>
-     </Link>
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
@@ -60,11 +62,9 @@ const Rocket = () => {
   <Row>
     <Col className="Falcon9" sm={3}>
         Falcon 9
-        <Link to="/rocket-detail" class="buttonS">
-     <Button variant="outline-light" class="button-RK" type="button"> 
+     <Button class="buttonS" variant="outline-light" class="button-RK" type="button" onClick={(e)=>{sendtoDetail("falcon9")}}> 
           Detail
      </Button>
-     </Link>
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
@@ -92,11 +92,9 @@ const Rocket = () => {
   <Row>
     <Col className="Falcon9" sm={3}>
         Falcon Heavy
-        <Link to="/rocket-detail" class="buttonS">
-     <Button variant="outline-light" class="button-RK" type="button"> 
+     <Button class="buttonS" variant="outline-light" class="button-RK" type="button" onClick={(e)=>{sendtoDetail("falconheavy")}}> 
           Detail
      </Button>
-     </Link>
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
@@ -125,7 +123,7 @@ const Rocket = () => {
     <Col className="Falcon9" sm={3}>
         Starship
         <Link to="/rocket-detail" class="buttonS">
-     <Button variant="outline-light" class="button-RK" type="button"> 
+     <Button variant="outline-light" class="button-RK" type="button" onClick={(e)=>{sendtoDetail("starship")}}> 
           Detail
      </Button>
      </Link>
