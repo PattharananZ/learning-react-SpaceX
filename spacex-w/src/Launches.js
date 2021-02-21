@@ -21,9 +21,7 @@ import Select from 'react-select'
 // };
 
 const Launches = () => {
-    const text = ""
     const [launches, setRockets] = useState([])
-    const [setText, indexValue] = useState([])
     // const [loading, setLoading] = useState(false);
     useEffect(
         () => {
@@ -41,18 +39,6 @@ const Launches = () => {
         { value: true, label: 'Success' },
         { value: false, label: 'Failed' },
     ]
-
-    const handleSearch = useCallback(
-        (event) => {
-            setText(event.target.value);
-        },
-        [setText, indexValue]
-    );
-    const filterName = useMemo(() => {
-        if (indexValue === 0) {
-
-        }
-    })
     const no = "No Detail";
     return (
         <div className="launches">
@@ -63,7 +49,7 @@ const Launches = () => {
                             <span className="text-3">Launches</span>
                         </Col>
                         <Col lg={4} xs={5}>
-                            <Form.Control value={text} onChange={handleSearch} placeholder="Rocket Name" />
+                            <Form.Control placeholder="Rocket Name" />
                         </Col>
                         <Col lg={4} xs={5}>
                             <Form.Control placeholder="Year" />
