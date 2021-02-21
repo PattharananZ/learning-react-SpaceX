@@ -68,11 +68,7 @@ const LaunchesDT = () => {
             <Pagination.Prev />
           </Pagination>
         </Col>
-<<<<<<< Updated upstream
         <Col className="next" sm={6} onClick={(e)=>{change(Number(id)+1)}}>
-=======
-        <Col className="Prev2" sm={6}>
->>>>>>> Stashed changes
           <Pagination>
             <Pagination.Next />
           </Pagination>

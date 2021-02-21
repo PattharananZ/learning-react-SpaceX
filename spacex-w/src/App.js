@@ -25,12 +25,12 @@ function App() {
         <header className="App-header">
 
           
-        <Col className="navbar-menu"sm={6}>
-          <div className="App-logo">
-          <a className="logoMain" href="/">
-            <Image src={logo1} className="img-logo"/>
-            </a>
-            </div>
+        <Col className="navbar-menu" sm={6}>
+              <Link to="/">
+                <div className="App-logo">
+                  <Image src={logo1} className="img-logo" />
+                </div>
+              </Link>
             </Col>
             <Col className="navbar-menu"sm={2}>
             <NavLink exact to="/" activeClassName="is-active" className="navbar-item">
