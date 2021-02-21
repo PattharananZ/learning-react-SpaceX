@@ -219,6 +219,9 @@ iframe#widget4{
     width: 35vw ;
     height: 20vw ;
    }
+.home-wel{
+    width: 70%;
+}
 /* Responsive */
 @media all and (max-width:1000px) {
   }
@@ -231,6 +234,9 @@ iframe#widget4{
       .img{
           width: 100vw;
       }
+      .home-wel{
+          width: 80%;
+    }
   }
 
   @media screen and (max-width: 769px) {
@@ -250,6 +256,10 @@ iframe#widget4{
     .content.page2{
         display: flex;
         flex-direction: column;
+        text-align: center;
+    }
+    .content.page2 .text-1{
+        padding-left: 2.5em;
     }
     .row {
         display: flex;
@@ -282,7 +292,7 @@ iframe#widget4{
     font-size: 1em;
 }
 .btn-outline-dark {
-    margin-left: 0%;
+    margin-left: 5%;
     margin-top: 5%;
 }
 }
