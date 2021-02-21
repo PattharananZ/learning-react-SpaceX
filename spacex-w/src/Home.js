@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Row, Col } from 'react-bootstrap';
@@ -24,7 +25,7 @@ const Rocket = () => {
             <div className="content page1">
                 <img src={logo2} className="img1" />
                 <span className="text-1">SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</span>
-                <Button variant="outline-dark up">Learn More</Button>
+                <Button variant="outline-dark up" href="#info">Learn More</Button>
                 <div class="box">
                     <span></span>
                     <span></span>
@@ -58,7 +59,9 @@ const Rocket = () => {
                     <Col md="6" sm="12" className="col-6">
                         <h2 className="topic">Rocket</h2>
                         <span className="text-2">THE WORLD’S MOST POWERFUL ROCKET</span><br></br>
+                        <Link to="/rocket" class="buttonS">
                         <Button variant="outline-dark" to="info">Learn More</Button>
+                        </Link>
                         </Col>
                 </div>
             </div>
@@ -66,7 +69,9 @@ const Rocket = () => {
                 <div className="content page4">
                     <h2 className="topic2">Launches</h2>
                     <span className="text-2">You can watch a replay of this mission above.</span>
+                    <Link to="/launches" class="buttonS">
                     <Button variant="outline-dark up">Learn More</Button>
+                    </Link>
 
                 </div>
                 <div className="footer">
