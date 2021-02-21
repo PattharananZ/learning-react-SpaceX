@@ -5,22 +5,10 @@ import icon1 from './image/filter.png'
 import icon2 from './image/search.png'
 import test from './image/RocketTest.jpg'
 import nopic from './image/nopic.png'
-import * as loadingData from "./loading.json"
 import { useEffect, useState, useMemo } from 'react'
-import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Alert } from 'react-bootstrap'
+import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Alert, Spinner } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import Select from 'react-select'
-
-
-// loadingscreen
-// const defaultOptions = {
-//     loop: true,
-//     autoplay: true,
-//     animationData: loadingData.default,
-//     rendererSettings: {
-//         preserveAspectRatio: "xMidYMid slice"
-//     }
-// };
 
 const Launches = () => {
     const [launches, setRockets] = useState([])
@@ -28,7 +16,6 @@ const Launches = () => {
     const [searchYear, setSearchYear] = useState('')
     const [Issuc, setSuc] = useState('')
     let his = useHistory()
-    // const [loading, setLoading] = useState(false);
     useEffect(
         () => {
             const fetchRockets = async () => {
@@ -40,8 +27,8 @@ const Launches = () => {
         },
         [],
     )
-    const sendtoDetail = (id) =>{
-        his.push('/launches/'+id)
+    const sendtoDetail = (id) => {
+        his.push('/launches/' + id)
     }
     const options = [
         { label: 'All', value: "no" },
@@ -77,20 +64,22 @@ const Launches = () => {
                     </Form.Row>
                 </Form>
                 <div className="lan-card">
+                    {launches.length == 0 ? (
+                    <Spinner animation="border" variant="light" className="loading" />) : null}
                     {launches.filter((launche) => {
-                        if(Issuc.value == "no" || Issuc.value == undefined){
-                            if((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear)){
+                        if (Issuc.value == "no" || Issuc.value == undefined) {
+                            if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear)) {
                                 return launche
                             }
-                        }else if (Issuc.value == true || Issuc.value == false){
+                        } else if (Issuc.value == true || Issuc.value == false) {
                             console.log((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success)
-                            if((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success){
+                            if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success) {
                                 return launche
                             }
                         }
                     }
                     ).map((launche, key) => (
-                        <Card className="card-detail" style={{ width: '16rem' }} key={key} onClick={(e)=>{sendtoDetail(launche.flight_number)}}>
+                        <Card className="card-detail" style={{ width: '16rem' }} key={key} onClick={(e) => { sendtoDetail(launche.flight_number) }}>
                             <Card.Img variant="top" className="image-lan" src={launche.links.mission_patch == null ? nopic : launche.links.mission_patch} />
                             <Card.Body>
                                 <Card.Title >{launche.rocket.rocket_name}</Card.Title>

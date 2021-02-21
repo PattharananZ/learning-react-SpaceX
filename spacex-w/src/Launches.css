@@ -56,7 +56,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-
+.loading{
+    padding: 3vw;
+    margin: auto;
+}
 
 
 /* Responsive */
