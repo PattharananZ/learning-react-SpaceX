@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import './Launches.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import icon1 from './image/filter.png'
@@ -6,8 +6,9 @@ import icon2 from './image/search.png'
 import test from './image/RocketTest.jpg'
 import nopic from './image/nopic.png'
 import * as loadingData from "./loading.json"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Alert } from 'react-bootstrap'
+import Select from 'react-select'
 
 // loadingscreen
 // const defaultOptions = {
@@ -21,6 +22,7 @@ import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Aler
 
 const Launches = () => {
     const [launches, setRockets] = useState([])
+    const [searchTern, setSearchTern] = useState('')
     // const [loading, setLoading] = useState(false);
     useEffect(
         () => {
@@ -33,26 +35,44 @@ const Launches = () => {
         },
         [],
     )
+    const options = [
+        { value: null, label: 'All' },
+        { value: true, label: 'Success' },
+        { value: false, label: 'Failed' },
+    ]
     const no = "No Detail";
     return (
         <div className="launches">
             <Container>
                 <Form className="search">
                     <Form.Row>
-                        <Col lg={3} xs={12}>
+                        <Col lg={2} xs={12}>
                             <span className="text-3">Launches</span>
                         </Col>
-                        <Col lg={8} xs={10}>
-                            <Form.Control placeholder="Search Name Rocket" />
+                        <Col lg={4} xs={5}>
+                            <Form.Control placeholder="Rocket Name" onChange={event => { setSearchTern(event.target.value) }} />
                         </Col>
-                        <Col lg={1} xs={2}>
-                            <Button className="filter-ico" variant="secondary"><img src={icon1} /></Button>
+                        <Col lg={4} xs={5}>
+                            <Form.Control placeholder="Year" />
+                        </Col>
+                        <Col lg={2} xs={2}>
+                            <Select
+                                defaultValue={options[0]}
+                                options={options}
+                            />
                         </Col>
                     </Form.Row>
                 </Form>
                 <div className="lan-card">
-                    {launches.map((launche) => (
-                        <Card classname="card-detail" style={{ width: '16rem' }}>
+                    {launches.filter((launche => {
+                        if (searchTern == "") {
+                            return launche
+                        } else if (launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) {
+                            return launche
+                        }
+                    })).map((launche, key) => (
+                        // text.length > 0 ? filterName.map(launche)
+                        < Card classname="card-detail" style={{ width: '16rem' }} key={key}>
                             <Card.Img variant="top" className="image-lan" src={launche.links.mission_patch == null ? nopic : launche.links.mission_patch} />
                             <Card.Body>
                                 <Card.Title >{launche.rocket.rocket_name}</Card.Title>
@@ -71,7 +91,7 @@ const Launches = () => {
                     ))}
                 </div>
             </Container>
-        </div>
+        </div >
     )
 }
 export default Launches
