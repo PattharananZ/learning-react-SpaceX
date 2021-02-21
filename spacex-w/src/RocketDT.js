@@ -25,8 +25,10 @@ import { Container, Col, Row, Image, Carousel, Pagination, mdbreact } from 'reac
 
 const RocketDT = () => {
   return (
-   <Container>
+   <Container fluid className="RKDTs">
+     
      <div class='wrap'>
+       
   <div class='star'></div>
   <div class='star'></div>
   <div class='star'></div>
@@ -185,6 +187,7 @@ const RocketDT = () => {
           <h4 className="Flight">Company : | First flight : </h4>
         </Col>
       </Row>
+      
       <Row className="PNG">
         <Col className="png" sm={6}>
         <Image src={overview0} className="rocket-pic"/>
@@ -256,6 +259,18 @@ const RocketDT = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+        </Col>
+      </Row>
+      <Row className="ButtonPN">
+        <Col className="Prev-s" sm={6}>
+          <Pagination className="rocket">
+            <Pagination.Prev />
+          </Pagination>
+        </Col>
+        <Col className="next-s" sm={6}>
+          <Pagination className="rocket2">
+            <Pagination.Next />
+          </Pagination>
         </Col>
       </Row>
     </Container>
