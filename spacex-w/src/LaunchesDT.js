@@ -28,6 +28,7 @@ const LaunchesDT = () => {
     return <div></div>;
   }
   return (
+    
     <Container fluid className="ldt">
       <div id='stars'></div>
       <div id='stars2'></div>
@@ -42,15 +43,15 @@ const LaunchesDT = () => {
       <Container>
         <Row className="LA-DT">
           <Col className="info-launch" sm={6}>
-            <h2 className="titleLD">Details</h2>
+            <h2 className="titleLD">Details</h2><hr></hr>
             {launches.rocket.rocket_name} <br></br>
     Type : {launches.rocket.rocket_type} <br></br>
     Year : {launches.launch_year} <br></br>
     Serial : {launches.rocket.first_stage.cores[0].core_serial} <br></br>
     Payload : {launches.rocket.second_stage.payloads[0].payload_id} <br></br>
     Payload-type : {launches.rocket.second_stage.payloads[0].payload_type} <br></br>
-    Success : {launches.launch_success == true ? <Alert variant="success">Success</Alert> : <Alert variant="danger">Failed</Alert>} <br></br>
-    Detail : <span className="detail-lan">{launches.details == null ? "No Detail" : launches.details}</span>
+    Success : {launches.launch_success == true ? <Alert variant="success">Success</Alert> : <Alert variant="danger">Failed</Alert>}
+    <span className="detail-lan">{launches.details == null ? "No Detail" : launches.details}</span>
           </Col>
           <Col className="img-launch" sm={6}>
             <Row className="img-flex">

@@ -11,10 +11,12 @@ body{
     display: block;
     padding-top: 1vh !important;
     overflow: hidden;
+    padding-bottom: 2vh !important;
   }
   
   .rocket-pic{
       width: 90%;
+      padding: 3vw;
   }
   .col-sm-12 {
       padding:0% !important;
@@ -56,8 +58,7 @@ body{
     padding-left: 5%;
 }
 .info-launch{
-    padding-top: 1vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: left;
     color: rgb(129, 129, 129);
     border: rgb(255, 255, 255) solid 0.4vh;
@@ -138,7 +139,7 @@ body{
     transition: all 1s;
     width: 45%;
     font-weight: 800;
-    margin-left: 7vw;
+    margin-right: 5vh;
   }
   .btn-s a.linkD{
     color: rgb(0, 0, 0);
@@ -207,16 +208,17 @@ body{
     display: flex;
     flex-direction: column;
 }
+  }
 
 .titleLD{
   font-size: 4vw;
   color: rgb(214, 214, 214);
 }
   span.btn-s{
-    margin-left: 20vw;
+    margin-left: 0vw;
   }
   .Mission{
-    font-size: 7vw;
+    font-size: 5vw;
     color: rgb(255, 255, 255);
 }
 .Flight{
@@ -227,9 +229,25 @@ body{
   margin-top: -50vh;
   font-size: 5vh;
 }
+.fade.alert.alert-danger-show{
+  height: 3vh !important;
+  font-size: 1vh;
+  padding: 0%;
 }
-  
-    
+.fade.alert.alert-success-show {
+  height: 3vh;
+  font-size: 1vw;
+  padding: 0%;
+}
+/* .alert{
+  margin-bottom: 0 !important;
+} */
+  a.linkD{
+    color: #000000;
+  }
+hr{
+  border-top: 3px solid rgb(255 255 255 / 100%) !important;
+}
   @media screen and (max-width: 376px) {}
     
   @media screen and (max-width: 326px) {}

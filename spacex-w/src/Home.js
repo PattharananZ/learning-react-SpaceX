@@ -26,11 +26,13 @@ const Rocket = () => {
                 <img src={logo2} className="img1" />
                 <span className="text-1">SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</span>
                 <Button variant="outline-dark up" href="#info">Learn More</Button>
+                <a className="arrowD"href="#info">
                 <div class="box">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+                </a>
             </div>
 
             <div className="content page2" id="info">

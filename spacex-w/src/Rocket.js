@@ -38,23 +38,23 @@ const Rocket = () => {
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
-        <Image src={overview0} className="rocket-pic"roundedCircle/>
+        <Image src={overview0} className="rocket-img"roundedCircle/>
     <div class="fontSize">Overview</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={FirstFC1} className="rocket-pic"roundedCircle/>
+        <Image src={FirstFC1} className="rocket-img"roundedCircle/>
         <div class="fontSize">First Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={SecondFC1} className="rocket-pic"roundedCircle/>
+        <Image src={SecondFC1} className="rocket-img"roundedCircle/>
         <div class="fontSize">Second Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={PayloadFCHV} className="rocket-pic"roundedCircle/>
+        <Image src={PayloadFCHV} className="rocket-img"roundedCircle/>
         <div class="fontSize">Payload</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={EngineFC1} className="rocket-pic"roundedCircle/>
+        <Image src={EngineFC1} className="rocket-img"roundedCircle/>
         <div class="fontSize">Engine</div>
         </div>
     </Col>
@@ -68,23 +68,23 @@ const Rocket = () => {
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
-        <Image src={overview1} className="rocket-pic"roundedCircle/>
+        <Image src={overview1} className="rocket-img"roundedCircle/>
         <div class="fontSize">Overview</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={FirstFC9} className="rocket-pic"roundedCircle/>
+        <Image src={FirstFC9} className="rocket-img"roundedCircle/>
         <div class="fontSize">First Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={SecondFC9} className="rocket-pic"roundedCircle/>
+        <Image src={SecondFC9} className="rocket-img"roundedCircle/>
         <div class="fontSize">Second Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={PayloadFC9} className="rocket-pic"roundedCircle/>
+        <Image src={PayloadFC9} className="rocket-img"roundedCircle/>
         <div class="fontSize">Payload</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={EngineFC9} className="rocket-pic"roundedCircle/>
+        <Image src={EngineFC9} className="rocket-img"roundedCircle/>
         <div class="fontSize">Engine</div>
         </div>
     </Col>
@@ -98,23 +98,23 @@ const Rocket = () => {
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
-        <Image src={overview2} className="rocket-pic"roundedCircle/>
+        <Image src={overview2} className="rocket-img"roundedCircle/>
         <div class="fontSize">Overview</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={FirstHV} className="rocket-pic"roundedCircle/>
+        <Image src={FirstHV} className="rocket-img"roundedCircle/>
         <div class="fontSize">First Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={SecondFC9} className="rocket-pic"roundedCircle/>
+        <Image src={SecondFC9} className="rocket-img"roundedCircle/>
         <div class="fontSize">Second Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={PayloadFCHV} className="rocket-pic"roundedCircle/>
+        <Image src={PayloadFCHV} className="rocket-img"roundedCircle/>
         <div class="fontSize">Payload</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={EngineFC9} className="rocket-pic"roundedCircle/>
+        <Image src={EngineFC9} className="rocket-img"roundedCircle/>
         <div class="fontSize">Engine</div>
         </div>
     </Col>
@@ -130,23 +130,23 @@ const Rocket = () => {
     </Col>
     <Col className="RC-FC9" sm={9}>
         <div class="RC-FC9-D"> 
-        <Image src={overview3} className="rocket-pic"roundedCircle/>
+        <Image src={overview3} className="rocket-img"roundedCircle/>
         <div class="fontSize">Overview</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={FirstStar} className="rocket-pic"roundedCircle/>
+        <Image src={FirstStar} className="rocket-img"roundedCircle/>
         <div class="fontSize">First Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={SecondStar} className="rocket-pic"roundedCircle/>
+        <Image src={SecondStar} className="rocket-img"roundedCircle/>
         <div class="fontSize">Second Stage</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={PayloadStar} className="rocket-pic"roundedCircle/>
+        <Image src={PayloadStar} className="rocket-img"roundedCircle/>
         <div class="fontSize">Payload</div>
         </div>
         <div class="RC-FC9-D"> 
-        <Image src={EngineStar} className="rocket-pic"roundedCircle/>
+        <Image src={EngineStar} className="rocket-img"roundedCircle/>
         <div class="fontSize">Engine</div>
         </div>
     </Col>

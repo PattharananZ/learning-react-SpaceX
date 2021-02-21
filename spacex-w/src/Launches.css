@@ -15,11 +15,9 @@
     align-items: center;
 }
 .search{
-    padding: 5vw;
+    padding-left: 3vw !important;
 }
-.col-sm-3{
-    
-}
+
 .filter-ico > *{
     width: 1rem;
 }
@@ -33,14 +31,24 @@
 .image-lan{
     width: 10rem;
     align-self: center;
+    padding-top: 2vw;
 }
 .lan-card{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .card-body{
     padding: 0 !important;
 }
+.card-detail:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+.card-title {
+    padding-top: 1vw;
+}
+
 .detail-lan{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,8 +60,6 @@
 
 
 /* Responsive */
-@media all and (max-width:500px) {
-    .card{
-        margin: auto;
-    }
+@media all and (max-width:415px) {
+   
 }
