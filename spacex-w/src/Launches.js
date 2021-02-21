@@ -90,7 +90,7 @@ const Launches = () => {
                         }
                     }
                     ).map((launche, key) => (
-                        < Card classname="card-detail" style={{ width: '16rem' }} key={key} onClick={(e)=>{sendtoDetail(launche.flight_number)}}>
+                        <Card classname="card-detail" style={{ width: '16rem' }} key={key} onClick={(e)=>{sendtoDetail(launche.flight_number)}}>
                             <Card.Img variant="top" className="image-lan" src={launche.links.mission_patch == null ? nopic : launche.links.mission_patch} />
                             <Card.Body>
                                 <Card.Title >{launche.rocket.rocket_name}</Card.Title>

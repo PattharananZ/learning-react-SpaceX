@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useHistory } from 'react-router-dom';
+import { useParams, Link, useHistory, NavLink } from 'react-router-dom';
 import './LaunchesDT.css';
 import Test from './image/testPNG.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import nopic from './image/nopic.png'
 import { Container, Col, Row, Image, Button, Pagination, Alert } from 'react-bootstrap';
 const LaunchesDT = () => {
-  
   const { id } = useParams();
   let his = useHistory()
   const [launches, setRockets] = useState([])
@@ -25,7 +24,6 @@ const LaunchesDT = () => {
     },
     [],
   )
-  
   if (launches.flight_number == null) {
     return <div></div>;
   }
@@ -57,22 +55,30 @@ const LaunchesDT = () => {
           <Col className="img-launch" sm={6}>
             <Row className="img-flex">
               <Image src={launches.links.mission_patch == null ? nopic : launches.links.mission_patch} className="rocket-pic"></Image>
-              <span className="btn-s"><a href="/rocket-detail" className="linkD">Rocket Detail </a></span>
+              <NavLink exact to={"/rocket/"+launches.rocket.rocket_id} className="linkD"><span className="btn-s">Rocket Detail</span></NavLink>
             </Row>
           </Col>
         </Row>
       </Container>
       <Row className="ButtonPN">
-        <Col className="Prev" sm={6} onClick={(e)=>{change(Number(id)-1)}}>
-          <Pagination>
-            <Pagination.Prev />
-          </Pagination>
-        </Col>
-        <Col className="next" sm={6} onClick={(e)=>{change(Number(id)+1)}}>
-          <Pagination>
-            <Pagination.Next />
-          </Pagination>
-        </Col>
+        {
+          id != 1 ?
+            <Col className="Prev" sm={6} onClick={(e) => { change(Number(id) - 1) }}>
+              <Pagination>
+                <Pagination.Prev />
+              </Pagination>
+            </Col>
+            : <Col></Col>
+        }
+        {
+          id != 110 ?
+            <Col className="next" sm={6} onClick={(e) => { change(Number(id) + 1) }}>
+              <Pagination>
+                <Pagination.Next />
+              </Pagination>
+            </Col>
+            : <Col></Col>
+        }
       </Row>
     </Container>
   )
