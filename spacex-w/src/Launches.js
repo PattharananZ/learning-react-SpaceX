@@ -27,6 +27,7 @@ const Launches = () => {
     const [searchTern, setSearchTern] = useState('')
     const [searchYear, setSearchYear] = useState('')
     const [Issuc, setSuc] = useState('')
+    let his = useHistory()
     // const [loading, setLoading] = useState(false);
     useEffect(
         () => {
@@ -40,7 +41,7 @@ const Launches = () => {
         [],
     )
     const sendtoDetail = (id) =>{
-        useHistory.push('/Launches/'+id)
+        his.push('/Launches/'+id)
     }
     const options = [
         { label: 'All', value: "no" },

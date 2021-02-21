@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import './LaunchesDT.css';
-import {Link} from 'react-router-dom';
 import Test from './image/testPNG.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Col, Row, Image, Button, Pagination} from 'react-bootstrap';
+import { Container, Col, Row, Image, Button, Pagination } from 'react-bootstrap';
 const LaunchesDT = () => {
-    return(
-        <Container fluid className="ldt">
-            <div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
-  <Row className="LA-DT">
-    <Col className="Mission-name" sm={12}>
-        <h1 className="Mission">Mission name</h1>
-        <h4 className="Flight">Flight number :1 | year : 2000</h4>
-    </Col>
-    </Row>
+  const { id } = useParams();
+  const [launches, setRockets] = useState([])
+  useEffect(
+    () => {
+      const fetchRockets = async () => {
+        const response = await fetch('https://api.spacexdata.com/v3/launches' + id)
+        const data = await response.json()
+        setRockets(data)
+      }
+      fetchRockets()
+    },
+    [],
+  )
+  return (
+    <Container fluid className="ldt">
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+      <Row className="LA-DT">
+        <Col className="Mission-name" sm={12}>
+          <h1 className="Mission">Mission name</h1>
+          <h4 className="Flight">Flight number :1 | year : 2000</h4>
+        </Col>
+      </Row>
 
-    <Container>
-    <Row className="LA-DT">
-    <Col className="info-launch" sm={6}>
-    <h2 className="titleLD">Details</h2>
+      <Container>
+        <Row className="LA-DT">
+          <Col className="info-launch" sm={6}>
+            <h2 className="titleLD">Details</h2>
     rocket_name <br></br>
     Type : rocket_type <br></br>
     Year : launch_year <br></br>
@@ -28,31 +41,31 @@ const LaunchesDT = () => {
     Payload : payloads_id(second) <br></br>
     Payload-type : payload_type <br></br>
     Success : launch_success <br></br>
-    Detail : details 
+    Detail : details
     </Col>
-    <Col className="img-launch" sm={6}>
-    <Row className="img-flex">
-    <Image src={Test} className="rocket-pic"></Image>
-	<span class="btn-s"><a href="/rocket-detail" className="linkD">Rocket Detail </a></span>
+          <Col className="img-launch" sm={6}>
+            <Row className="img-flex">
+              <Image src={Test} className="rocket-pic"></Image>
+              <span class="btn-s"><a href="/rocket-detail" className="linkD">Rocket Detail </a></span>
 
-    </Row>
-    </Col>
-  </Row>
-  </Container>
-  <Row className="ButtonPN">
-  <Col className="Prev" sm={6}>
-  <Pagination>
-  <Pagination.Prev />
-  </Pagination>
-  </Col>
-  <Col className="next" sm={6}>
-  <Pagination>
-  <Pagination.Next />
-  </Pagination>
-  </Col>
-  </Row>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+      <Row className="ButtonPN">
+        <Col className="Prev" sm={6}>
+          <Pagination>
+            <Pagination.Prev />
+          </Pagination>
+        </Col>
+        <Col className="next" sm={6}>
+          <Pagination>
+            <Pagination.Next />
+          </Pagination>
+        </Col>
+      </Row>
     </Container>
-    )
+  )
 }
 
 export default LaunchesDT
