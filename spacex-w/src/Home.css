@@ -231,6 +231,10 @@ iframe#widget4{
 .home-wel{
     width: 70%;
 }
+.btn-outline-dark.up {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
 /* Responsive */
 @media all and (max-width:1000px) {
   }
@@ -273,7 +277,7 @@ iframe#widget4{
         height: 50vw;
     }
     .content.page2 .text-1{
-        padding-left: 2.5em;
+        padding-left: 3% !important;
     }
     .row {
         display: flex;
@@ -308,14 +312,23 @@ iframe#widget4{
 }
 .btn-outline-dark {
     margin-bottom: 2em;
-    margin-left: 0em!important;
+
     margin-top: 0%  !important;;
     width: 180px; 
 }
+h3{
+    padding-left: 3%;
+}
 }
 button.btn.btn-outline-dark{
-    padding:0% !important;
+
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     margin: 0% !important;
+}
+
+.btn-outline-dark.up {
+    padding-left: 1%;
 }
 
   @media screen and (max-width: 376px) {

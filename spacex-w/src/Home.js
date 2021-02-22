@@ -39,7 +39,7 @@ const Rocket = () => {
                 <Row className="row-2">
                     <Col md="6" sm="12" className="col-6 social-content">
                         <h3>Space Exploration Technologies Corp. </h3>
-                        <span className="text-1">aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk</span>
+                        <span className="text-1 home-wel">aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk</span>
                         <div className="social">
                             <img src={so1} />
                             <img src={so2} />
