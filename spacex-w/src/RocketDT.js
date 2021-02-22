@@ -213,14 +213,16 @@ const RocketDT = () => {
         <Col className="Mission-name" sm={12}>
           <h1 className="Mission">{rockets.rocket_name}</h1>
           <h4 className="Flight">Company : {rockets.company} | First flight : {rockets.first_flight}</h4>
+          <p className="Des">{rockets.description}</p>
         </Col>
       </Row>
 
       <Row className="PNG">
         <Col className="png" sm={6}>
-          <Image src={image_bg[0][rockets.id-1]} className="rocket-pic" />
+          <Image src={image_bg[0][rockets.id - 1]} className="rocket-pic" />
         </Col>
         <Col className="info-rocketz" sm={6}>
+
           <Carousel>
             <Carousel.Item interval={12000}>
               <img
@@ -309,7 +311,7 @@ const RocketDT = () => {
         }
         {
           rockets.rocket_id != "starship" ?
-            <Col className="next" sm={6} onClick={(e) => { 
+            <Col className="next" sm={6} onClick={(e) => {
               if (rockets.rocket_id == "falcon1") {
                 return change("falcon9")
               } else if (rockets.rocket_id == "falcon9") {
@@ -317,7 +319,7 @@ const RocketDT = () => {
               } else if (rockets.rocket_id == "falconheavy") {
                 return change("starship")
               }
-             }}>
+            }}>
               <Pagination>
                 <Pagination.Next />
               </Pagination>

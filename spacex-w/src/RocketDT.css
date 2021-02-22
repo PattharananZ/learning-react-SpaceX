@@ -85,14 +85,31 @@ body{
 .page-link {
   color: #000000;
 }
- 
-  @media screen and (max-width: 769px) {}
+.w-100 {
+  width: 120%!important;
+  height: 200% !important;
+}
+  @media screen and (max-width: 769px) {
+    .PNG.row {
+      padding-right: 10vw !important;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+  }
+  .w-100 {
+    width: 150%!important;
+    height: 200% !important;
+}
+  }
     
   @media screen and (max-width: 420px) {
     .pagination.RD {
       margin-top: 0vh;
       font-size: 5vh;
     }
+    .PNG.row {
+      padding-right: 0vw !important;
+  }
     .info-Rocket.col-sm-6{
       font-size: 3vw;
       align-items: center;
@@ -101,7 +118,15 @@ body{
       border: none;
       display: flex;
       flex-direction: column;
+      
   }
+  .carousel-caption {
+    background-color: rgba(0,0,0,0.3);
+    margin-top: -50% !important;
+    padding-bottom: 20% !important;
+    bottom: 5vw !important;
+    font-size: 1vw;
+}
   }
     
   @media screen and (max-width: 376px) {}
@@ -301,7 +326,7 @@ img {vertical-align: middle;}
  background-color: rgba(0,0,0,0.3);
  margin-top:-50% !important;
  padding-bottom: 0 !important;
- bottom: 5vw !important;
+ bottom: 8vw !important;
  font-size: 1vw;
 }
 .carousel-indicators {
@@ -309,10 +334,16 @@ img {vertical-align: middle;}
  }
  .info-rocketz.col-sm-6{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    align-items:center;
+   padding-top: 5%;
  }
-
+ .ss.col{
+   flex-grow: 0 !important;
+ }
+p.Des{
+  color:#8f8f8f;
+}
 
 
  

@@ -58,10 +58,10 @@ const Rocket = () => {
                 <Col md="6" sm="12" className="col-6">
                         <img src={image1} className="img3" />
                     </Col>
-                    <Col md="6" sm="12" className="col-6">
+                    <Col md="6" sm="12" className="col-6-s">
                         <h2 className="topic">Rocket</h2>
                         <span className="text-2">THE WORLD’S MOST POWERFUL ROCKET</span><br></br>
-                        <Link to="/rocket" class="buttonS">
+                        <Link to="/rocket" class="ButtonK">
                         <Button variant="outline-dark" to="info">Learn More</Button>
                         </Link>
                         </Col>
@@ -71,7 +71,7 @@ const Rocket = () => {
                 <div className="content page4">
                     <h2 className="topic2">Launches</h2>
                     <span className="text-2">You can watch a replay of this mission above.</span>
-                    <Link to="/launches" class="buttonS">
+                    <Link to="/launches" class="ButtonK">
                     <Button variant="outline-dark up">Learn More</Button>
                     </Link>
 
