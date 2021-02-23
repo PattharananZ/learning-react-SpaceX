@@ -37,6 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    margin-left: 4%;
 }
 .card-body{
     padding: 0 !important;
@@ -67,6 +68,13 @@
    
 }
 @media screen and (max-width: 770px) {
+    .lan-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1320px) {
     .lan-card{
         display: flex;
         flex-wrap: wrap;

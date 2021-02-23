@@ -292,7 +292,7 @@ const RocketDT = () => {
           </Carousel>
           <Row className="button-info">
         <Col className="wiki" sm={12}>
-        <Button className= "d-button" variant="light">View in wikipedia</Button>
+        <Button className= "d-button" variant="light" href={rockets.wikipedia}>View in wikipedia</Button>
         </Col>
         </Row>
         <Row className="button-info">

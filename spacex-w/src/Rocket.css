@@ -17,6 +17,7 @@ body{
     align-items: center;
     font-size: 3vw;
     border: black solid 1vw;
+    flex-direction: column;
   }
   .RC-FC9.col-sm-9{
     display: flex;
@@ -40,6 +41,10 @@ body{
   }
   a.buttonS{
       padding: 1vw;
+  }
+  .btn.btn-outline-light{
+    font-size: 1vw;
+    width: 15vw;
   }
   .fontSize{
       width: 100%;
@@ -83,6 +88,13 @@ body{
       width: 100%;
       font-size: 50%;
       color: rgb(255, 255, 255);
+  }
+  .Falcon9.col-sm-3 {
+    font-size: 5vw;
+}
+  .btn.btn-outline-light{
+    font-size: 1vw;
+    width: 30vw;
   }
   }
   @media screen and (max-width: 376px) {
