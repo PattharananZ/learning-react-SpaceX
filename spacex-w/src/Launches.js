@@ -47,13 +47,13 @@ const Launches = () => {
                         <Col lg={2} xs={12}>
                             <span className="text-3">Launches</span>
                         </Col>
-                        <Col lg={4} xs={5}>
+                        <Col lg={4} xs={12}>
                             <Form.Control placeholder="Rocket Name" onChange={event => { setSearchTern(event.target.value) }} />
                         </Col>
-                        <Col lg={4} xs={5}>
+                        <Col lg={4} xs={12}>
                             <Form.Control placeholder="Year" onChange={event => { setSearchYear(event.target.value) }} />
                         </Col>
-                        <Col lg={2} xs={2}>
+                        <Col lg={2} xs={12}>
                             <Select
                                 defaultValue={options[0]}
                                 options={options}
