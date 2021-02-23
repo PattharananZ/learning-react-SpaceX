@@ -138,6 +138,19 @@ d-button.btn.btn-dark.rocket-pic3:hover{
 .carousel-indicators li {
 background-color: rgb(78, 78, 78);
 }
+@media screen and (max-width: 1025px) {
+  .pagination {
+    margin-top: -20vh !important;
+  }
+  .d-button.btn.btn-light {
+    width: 37vw;
+    height: 4vh;
+}
+.d-button.btn.btn-dark {
+  width: 37vw;
+  height: 4vh;
+}
+}
   @media screen and (max-width: 769px) {
     .PNG.row {
       padding-right: 0vw !important;
@@ -157,6 +170,9 @@ background-color: rgb(78, 78, 78);
   width: 40vw;
   height: 5vh;
 }
+.pagination {
+  margin-top: -18vh !important;
+}
   }
     
   @media screen and (max-width: 420px) {
@@ -167,6 +183,7 @@ background-color: rgb(78, 78, 78);
     .PNG.row {
       padding-right: 0vw !important;
   }
+  
     .info-Rocket.col-sm-6{
       font-size: 3vw;
       align-items: center;
@@ -194,17 +211,20 @@ background-color: rgb(78, 78, 78);
   width: 78vw;
   height: 5vh;
 }
+.pagination {
+  margin-top: -70vh !important;
+  font-size: 5vh;
+}
 
   }
     
   @media screen and (max-width: 376px) {
     .d-button.btn.btn-light {
-      width: 75vw;
+      width: 72vw;
       height: 5vh;
-      margin-right: 2%
     }
     .d-button.btn.btn-dark {
-      width: 75vw;
+      width: 72vw;
       height: 5vh;
     }
   }
