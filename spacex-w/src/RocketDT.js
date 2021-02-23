@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useHistory, NavLink } from 'react-router-dom';
 import './RocketDT.css';
 import Test from './image/test2.jpg';
+import YT from "./image/so2.png";
 import falcon1 from "./image/OverFC1.png";
 import falcon9 from "./image/FC9-0z.png";
 import falconheavy from "./image/FCHV-0z.png";
@@ -24,7 +25,7 @@ import FirstFC1 from './image/FirstFC1.png';
 import SecondFC1 from './image/SecFC1.png';
 import EngineFC1 from './image/EngineFC1.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row, Image, Carousel, Pagination, mdbreact } from 'react-bootstrap';
+import { Container, Col, Row, Image, Carousel, Pagination, Button } from 'react-bootstrap';
 
 
 const RocketDT = () => {
@@ -209,17 +210,17 @@ const RocketDT = () => {
         <div class='star'></div>
       </div>
 
-      <Row className="LA-DT">
-        <Col className="Mission-name" sm={12}>
-          <h1 className="Mission">{rockets.rocket_name}</h1>
-          <h4 className="Flight">Company : {rockets.company} | First flight : {rockets.first_flight}</h4>
+      <Row className="LA-DT2">
+        <Col className="Rocket-name" sm={12}>
+          <h1 className="Rocket2">{rockets.rocket_name}</h1>
+          <h4 className="Flight2">Company : {rockets.company} | First flight : {rockets.first_flight}</h4>
           <p className="Des">{rockets.description}</p>
         </Col>
       </Row>
 
       <Row className="PNG">
         <Col className="png" sm={6}>
-          <Image src={image_bg[0][rockets.id - 1]} className="rocket-pic" />
+          <Image src={image_bg[0][rockets.id - 1]} className="rocket-pic2" />
         </Col>
         <Col className="info-rocketz" sm={6}>
 
@@ -289,6 +290,18 @@ const RocketDT = () => {
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
+          <Row className="button-info">
+        <Col className="wiki" sm={12}>
+        <Button className= "d-button" variant="light">View in wikipedia</Button>
+        </Col>
+        </Row>
+        <Row className="button-info">
+        <Col className="w-video" sm={12}>
+        <Button className= "d-button"variant="dark" href="https://www.youtube.com/user/spacexchannel">Watch a video&nbsp;
+        <Image src={YT} className="rocket-pic3" />
+        </Button>
+        </Col>
+      </Row>
         </Col>
       </Row>
       <Row className="ButtonPN">

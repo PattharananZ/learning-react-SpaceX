@@ -21,9 +21,14 @@ body{
     padding-right: 10vw !important;
   }
   
-  .rocket-pic{
-      width: 90%;
+  .rocket-pic2{
+      width: 100%;
+      padding-top: 2vh;
   }
+  .rocket-pic3{
+    width: 3%;
+    display:block;
+}
   .col-sm-12 {
       padding:0% !important;
   }
@@ -78,6 +83,10 @@ body{
   flex-direction:row;
   justify-content:flex-end;
 }
+.button-info{
+  display: flex;
+  flex-direction: column;
+}
 .pagination.RD {
   margin-top: 0vw !important;
   font-size: 5vh;
@@ -85,13 +94,53 @@ body{
 .page-link {
   color: #000000;
 }
+.Rocket2{
+  color: rgba(255, 255, 255);
+}
+.Flight2{
+  color: rgba(255, 255, 255);
+}
 .w-100 {
   width: 120%!important;
   height: 200% !important;
 }
+.Rocket-name.col-sm-12{
+  border: 0.5vh solid #FFF;
+  margin-left: 4vw !important;
+}
+.LA-DT2.row{
+  width:90%;
+  margin-left: 0% !important;
+  margin-right: 0% !important;
+}
+.d-button.btn.btn-dark{
+  width: 41vw;
+  height: 7vh;
+  background-color: black;
+  /* border: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-button.btn.btn-dark:hover {
+  color: rgb(255, 255, 255);
+  background-color: #ce0000e3;
+  
+}
+d-button.btn.btn-dark.rocket-pic3:hover{
+  width: 3%;
+  display: block;
+}
+.d-button.btn.btn-light{
+  width: 41vw;
+  height: 7vh;
+}
+.carousel-indicators li {
+background-color: rgb(78, 78, 78);
+}
   @media screen and (max-width: 769px) {
     .PNG.row {
-      padding-right: 10vw !important;
+      padding-right: 0vw !important;
       display: flex;
       flex-direction: column;
       align-content: center;
@@ -99,6 +148,14 @@ body{
   .w-100 {
     width: 150%!important;
     height: 200% !important;
+}
+.d-button.btn.btn-light {
+  width: 40vw;
+  height: 5vh;
+}
+.d-button.btn.btn-dark {
+  width: 40vw;
+  height: 5vh;
 }
   }
     
@@ -126,10 +183,31 @@ body{
     padding-bottom: 20% !important;
     bottom: 5vw !important;
     font-size: 1vw;
+    color: #000000;
 }
+.d-button.btn.btn-light {
+  width: 78vw;
+  height: 5vh;
+  margin-right: 2%
+}
+.d-button.btn.btn-dark {
+  width: 78vw;
+  height: 5vh;
+}
+
   }
     
-  @media screen and (max-width: 376px) {}
+  @media screen and (max-width: 376px) {
+    .d-button.btn.btn-light {
+      width: 75vw;
+      height: 5vh;
+      margin-right: 2%
+    }
+    .d-button.btn.btn-dark {
+      width: 75vw;
+      height: 5vh;
+    }
+  }
     
   @media screen and (max-width: 326px) {}
 
