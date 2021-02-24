@@ -58,10 +58,29 @@ html{
   justify-content: flex-start;
 
 }
-
-
+.logo-ham{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.hamburger{
+  align-items: center;
+  font-weight: bold;
+  padding: 0.1em;
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+  color: var(--color3);
+  border: white solid;
+  box-shadow: 0 0 0.1em var(--color1);
+  display: none;
+}
+.hamburger.click{
+  border-radius: 0.3em;
+  background-color: #7e7e7e3f;
+  color: white;
+  font-weight: bold;
+}
 .navbar-item{
-  background-color: var(--color2);
   color: var(--color3);
   width: 100%;
   padding-top: 1vh;
@@ -105,5 +124,21 @@ html{
 }
 nav {
   font-family: monospace;
+}
+
+@media screen and (max-width: 576px) {
+  .App-header{
+    flex-direction: column;
+  }
+  .hamburger{
+    display: flex;
+  }
+  .main-menu{
+    display: none;
+  }
+  .main-menu.click{
+    display: flex;
+  }
+
 }
 

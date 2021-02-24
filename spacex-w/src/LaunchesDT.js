@@ -4,7 +4,7 @@ import './LaunchesDT.css';
 import Test from './image/testPNG.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import nopic from './image/nopic.png'
-import { Container, Col, Row, Image, Button, Pagination, Alert } from 'react-bootstrap';
+import { Container, Col, Row, Image, Button, Pagination, Alert, Spinner } from 'react-bootstrap';
 const LaunchesDT = () => {
   const { id } = useParams();
   let his = useHistory()
@@ -28,11 +28,13 @@ const LaunchesDT = () => {
     return <div></div>;
   }
   return (
-    
+
     <Container fluid className="ldt">
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
+      {launches.length == 0 ?
+          (<Spinner animation="border" variant="light" className="loading" />) : null}
       <Row className="LA-DT">
         <Col className="Mission-name" sm={12}>
           <h1 className="Mission">{launches.mission_name}</h1>
@@ -51,12 +53,12 @@ const LaunchesDT = () => {
     Payload : {launches.rocket.second_stage.payloads[0].payload_id} <br></br>
     Payload-type : {launches.rocket.second_stage.payloads[0].payload_type} <br></br>
     Success : {launches.launch_success == true ? <Alert variant="success">Success</Alert> : <Alert variant="danger">Failed</Alert>}
-    <span className="detail-lan">{launches.details == null ? "No Detail" : launches.details}</span>
+            <span className="detail-lan">{launches.details == null ? "No Detail" : launches.details}</span>
           </Col>
           <Col className="img-launch" sm={6}>
             <Row className="img-flex">
               <Image src={launches.links.mission_patch == null ? nopic : launches.links.mission_patch} className="rocket-pic"></Image>
-              <NavLink exact to={"/rocket/"+launches.rocket.rocket_id} className="linkD"><span className="btn-s">Rocket Detail</span></NavLink>
+              <NavLink exact to={"/rocket/" + launches.rocket.rocket_id} className="linkD"><span className="btn-s">Rocket Detail</span></NavLink>
             </Row>
           </Col>
         </Row>

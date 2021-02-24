@@ -330,6 +330,15 @@ button.btn.btn-outline-dark{
 .btn-outline-dark.up {
     padding-left: 1%;
 }
+.col-6-s.col-md-6.col-sm-12 {
+    margin-bottom: 5%;
+}
+.icon-home{
+    width: 2.5rem;
+}
+.icon-home:hover{
+    opacity: 10%;
+}
 
   @media screen and (max-width: 376px) {
     iframe#widget4{

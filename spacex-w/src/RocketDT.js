@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useHistory, NavLink } from 'react-router-dom';
+import {Spinner} from 'react-bootstrap';
 import './RocketDT.css';
 import Test from './image/test2.jpg';
 import YT from "./image/so2.png";
@@ -209,7 +210,8 @@ const RocketDT = () => {
         <div class='star'></div>
         <div class='star'></div>
       </div>
-
+      {rockets.length == 0 ?
+          (<Spinner animation="border" variant="light" className="loading" />) : null}
       <Row className="LA-DT2">
         <Col className="Rocket-name" sm={12}>
           <h1 className="Rocket2">{rockets.rocket_name}</h1>

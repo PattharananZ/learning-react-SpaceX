@@ -41,11 +41,11 @@ const Rocket = () => {
                         <h3>Space Exploration Technologies Corp. </h3>
                         <span className="text-1 home-wel">aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk</span>
                         <div className="social">
-                            <img src={so1} />
-                            <img src={so2} />
-                            <img src={so3} />
-                            <img src={so4} />
-                            <img src={so5} />
+                            <a href="https://twitter.com/spacex" ><img src={so1} className="icon-home"/></a>
+                            <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" ><img src={so2} className="icon-home"/></a>
+                            <a href="https://www.instagram.com/spacex/" ><img src={so3} className="icon-home"/></a>
+                            <a href="https://www.flickr.com/photos/spacex/" ><img src={so4} className="icon-home"/></a>
+                            <a href="https://th.linkedin.com/company/spacex" ><img src={so5} className="icon-home"/></a>
                         </div>
                     </Col>
                     <Col md="6" sm="12" className="col-6">
