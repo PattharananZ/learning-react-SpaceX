@@ -44,7 +44,12 @@
 }
 .card-detail:hover{
     cursor: pointer;
-    opacity: 80%;
+    transition: all 0.2s ease-out;
+    border-color: rgb(117, 117, 117) solid;
+    border-radius: 1em;
+    border-width: 0.3em;
+    background-color: rgb(117, 117, 117);
+    color: white;
 }
 .card-title {
     padding-top: 1vw;
