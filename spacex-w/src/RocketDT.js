@@ -8,23 +8,6 @@ import falcon1 from "./image/OverFC1.png";
 import falcon9 from "./image/FC9-0z.png";
 import falconheavy from "./image/FCHV-0z.png";
 import starship from "./image/starship-0z.png";
-import overview1 from './image/FC9-0z.png';
-import FirstFC9 from './image/FC9-1z.png';
-import SecondFC9 from './image/FC9-2z.png';
-import PayloadFC9 from './image/FC9-3z.png';
-import EngineFC9 from './image/FC9-4z.png';
-import overview2 from './image/FCHV-0z.png';
-import FirstHV from './image/FCHV-1z.png';
-import PayloadFCHV from './image/FCHV-3z.png';
-import overview3 from './image/starship-0z.png';
-import FirstStar from './image/starship-1z.png';
-import SecondStar from './image/starship-2z.png';
-import PayloadStar from './image/starship-3z.png';
-import EngineStar from './image/starship-04z.png';
-import overview0 from './image/OverFC1.png';
-import FirstFC1 from './image/FirstFC1.png';
-import SecondFC1 from './image/SecFC1.png';
-import EngineFC1 from './image/EngineFC1.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Image, Carousel, Pagination, Button } from 'react-bootstrap';
 
@@ -308,13 +291,13 @@ const RocketDT = () => {
       </Row>
       <Row className="ButtonPN">
         {
-          rockets.rocket_id != "falcon1" ?
+          rockets.rocket_id !== "falcon1" ?
             <Col className="Prev" sm={6} onClick={(e) => {
               if (rockets.rocket_id == "falcon9") {
                 return change("falcon1")
-              } else if (rockets.rocket_id == "falconheavy") {
+              } else if (rockets.rocket_id === "falconheavy") {
                 return change("falcon9")
-              } else if (rockets.rocket_id == "starship") {
+              } else if (rockets.rocket_id === "starship") {
                 return change("falconheavy")
               }
             }}>
@@ -325,13 +308,13 @@ const RocketDT = () => {
             : <Col></Col>
         }
         {
-          rockets.rocket_id != "starship" ?
+          rockets.rocket_id !== "starship" ?
             <Col className="next" sm={6} onClick={(e) => {
-              if (rockets.rocket_id == "falcon1") {
+              if (rockets.rocket_id === "falcon1") {
                 return change("falcon9")
-              } else if (rockets.rocket_id == "falcon9") {
+              } else if (rockets.rocket_id === "falcon9") {
                 return change("falconheavy")
-              } else if (rockets.rocket_id == "falconheavy") {
+              } else if (rockets.rocket_id === "falconheavy") {
                 return change("starship")
               }
             }}>
