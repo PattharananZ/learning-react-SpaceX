@@ -291,9 +291,9 @@ const RocketDT = () => {
       </Row>
       <Row className="ButtonPN">
         {
-          rockets.rocket_id !=== "falcon1" ?
+          rockets.rocket_id !== "falcon1" ?
             <Col className="Prev" sm={6} onClick={(e) => {
-              if (rockets.rocket_id == "falcon9") {
+              if (rockets.rocket_id === "falcon9") {
                 return change("falcon1")
               } else if (rockets.rocket_id === "falconheavy") {
                 return change("falcon9")
