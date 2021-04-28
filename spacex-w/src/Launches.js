@@ -61,7 +61,7 @@ const Launches = () => {
                     </Form.Row>
                 </Form>
                 <div className="lan-card">
-                    {launches.length == 0 ? (
+                    {launches.length === 0 ? (
                     <Spinner animation="border" variant="light" className="loading" />) : null}
                     {launches.filter((launche) => {
                         if (Issuc.value === "no" || Issuc.value === undefined) {
