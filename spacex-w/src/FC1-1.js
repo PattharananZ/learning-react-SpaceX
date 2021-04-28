@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
 
 const FCover1 = () => {
   const [launches, setRockets] = useState([])
@@ -24,13 +23,14 @@ const FCover1 = () => {
       onChange={event => {setSearchTern(event.target.value)}}/>
       <ul>
         {launches.filter((launche => {
-          if (searchTern == ""){
+          if (searchTern === ""){
             return launche
           } else if (launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())){
             return launche
           }
-        })).map((launche, key) =>
-          <li key={key}>{launche.rocket.rocket_name}</li>)}
+        })).map((launche, key) => {
+          <li key={key}>{launche.rocket.rocket_name}</li>
+        })}
       </ul>
     </div>
   )

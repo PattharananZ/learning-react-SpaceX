@@ -1,26 +1,6 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
 import './Rocket.css';
-import overview1 from './image/FC9-0z.png';
-import FirstFC9 from './image/FC9-1z.png';
-import SecondFC9 from './image/FC9-2z.png';
-import PayloadFC9 from './image/FC9-3z.png';
-import EngineFC9 from './image/FC9-4z.png';
-import overview2 from './image/FCHV-0z.png';
-import FirstHV from './image/FCHV-1z.png';
-import PayloadFCHV from './image/FCHV-3z.png';
-import overview3 from './image/starship-0z.png';
-import FirstStar from './image/starship-1z.png';
-import SecondStar from './image/starship-2z.png';
-import PayloadStar from './image/starship-3z.png';
-import EngineStar from './image/starship-04z.png';
-import overview0 from './image/OverFC1.png';
-import FirstFC1 from './image/FirstFC1.png';
-import SecondFC1 from './image/SecFC1.png';
-import EngineFC1 from './image/EngineFC1.png';
-
-
-
 import { Container, Col, Row, Image, Button } from 'react-bootstrap';
 const Rocket = () => {
     let his = useHistory()

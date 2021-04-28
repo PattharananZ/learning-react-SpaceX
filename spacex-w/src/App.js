@@ -16,13 +16,13 @@ import RocketDT from './RocketDT';
 import { useState } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Image, Container, Col, NavDropdown } from 'react-bootstrap';
+import { Image, Container, Col} from 'react-bootstrap';
 function App() {
   const [ham, setHam] = useState('hamburger')
   const [menu, setMenu] = useState('navbar-menu main-menu')
   const change = () => {
     console.log("test")
-    if (ham == "hamburger") {
+    if (ham === "hamburger") {
       setHam("hamburger click")
       setMenu("navbar-menu main-menu click")
     }

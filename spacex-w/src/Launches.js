@@ -1,13 +1,10 @@
 import React from 'react'
 import './Launches.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import icon1 from './image/filter.png'
-import icon2 from './image/search.png'
-import test from './image/RocketTest.jpg'
 import nopic from './image/nopic.png'
-import { useEffect, useState, useMemo } from 'react'
-import { Container, Form, Row, Col, Button, Card, ListGroup, ListGroupItem, Alert, Spinner } from 'react-bootstrap'
-import { Link, useHistory } from 'react-router-dom'
+import { useEffect, useStat } from 'react'
+import { Container, Form, Col, Card, ListGroup, ListGroupItem, Alert, Spinner } from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
 import Select from 'react-select'
 
 const Launches = () => {
@@ -67,13 +64,13 @@ const Launches = () => {
                     {launches.length == 0 ? (
                     <Spinner animation="border" variant="light" className="loading" />) : null}
                     {launches.filter((launche) => {
-                        if (Issuc.value == "no" || Issuc.value == undefined) {
+                        if (Issuc.value === "no" || Issuc.value === undefined) {
                             if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear)) {
                                 return launche
                             }
-                        } else if (Issuc.value == true || Issuc.value == false) {
-                            console.log((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success)
-                            if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value == launche.launch_success) {
+                        } else if (Issuc.value === true || Issuc.value === false) {
+                            console.log((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value === launche.launch_success)
+                            if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value === launche.launch_success) {
                                 return launche
                             }
                         }
@@ -91,7 +88,7 @@ const Launches = () => {
                             <ListGroup className="list-group-flush">
                                 <ListGroupItem>
                                     <Alert variant="secondary">{launche.launch_year}</Alert>
-                                    {launche.launch_success == true ? <Alert variant="success" className="LD">Success</Alert> : <Alert variant="danger" className="LD">Failed</Alert>}
+                                    {launche.launch_success === true ? <Alert variant="success" className="LD">Success</Alert> : <Alert variant="danger" className="LD">Failed</Alert>}
                                 </ListGroupItem>
                             </ListGroup>
                         </Card>
