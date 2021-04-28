@@ -41,7 +41,7 @@ const Rocket = () => {
                         <span className="text-1 home-wel">aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk</span>
                         <div className="social">
                             <a href="https://twitter.com/spacex" ><img src={so1} className="icon-home" alt="" /></a>
-                            <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" ><img src={so2} className="icon-home"/></a>
+                            <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" ><img src={so2} className="icon-home"alt=""/></a>
                             <a href="https://www.instagram.com/spacex/" ><img src={so3} className="icon-home"alt="" /></a>
                             <a href="https://www.flickr.com/photos/spacex/" ><img src={so4} className="icon-home" alt="" /></a>
                             <a href="https://th.linkedin.com/company/spacex" ><img src={so5} className="icon-home"alt="" /></a>
