@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useHistory, NavLink } from 'react-router-dom';
 import './LaunchesDT.css';
-import Test from './image/testPNG.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import nopic from './image/nopic.png'
-import { Container, Col, Row, Image, Button, Pagination, Alert, Spinner } from 'react-bootstrap';
+import { Container, Col, Row, Image, Pagination, Alert, Spinner } from 'react-bootstrap';
 const LaunchesDT = () => {
   const { id } = useParams();
   let his = useHistory()
@@ -33,7 +32,7 @@ const LaunchesDT = () => {
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
-      {launches.length == 0 ?
+      {launches.length === 0 ?
           (<Spinner animation="border" variant="light" className="loading" />) : null}
       <Row className="LA-DT">
         <Col className="Mission-name" sm={12}>
@@ -52,7 +51,7 @@ const LaunchesDT = () => {
     Serial : {launches.rocket.first_stage.cores[0].core_serial} <br></br>
     Payload : {launches.rocket.second_stage.payloads[0].payload_id} <br></br>
     Payload-type : {launches.rocket.second_stage.payloads[0].payload_type} <br></br>
-    Success : {launches.launch_success == true ? <Alert variant="success">Success</Alert> : <Alert variant="danger">Failed</Alert>}
+    Success : {launches.launch_success === true ? <Alert variant="success">Success</Alert> : <Alert variant="danger">Failed</Alert>}
             <span className="detail-lan">{launches.details == null ? "No Detail" : launches.details}</span>
           </Col>
           <Col className="img-launch" sm={6}>
@@ -65,7 +64,7 @@ const LaunchesDT = () => {
       </Container>
       <Row className="ButtonPN">
         {
-          id != 1 ?
+          id !== 1 ?
             <Col className="Prev" sm={6} onClick={(e) => { change(Number(id) - 1) }}>
               <Pagination>
                 <Pagination.Prev />
@@ -74,7 +73,7 @@ const LaunchesDT = () => {
             : <Col></Col>
         }
         {
-          id != 110 ?
+          id !== 110 ?
             <Col className="next" sm={6} onClick={(e) => { change(Number(id) + 1) }}>
               <Pagination>
                 <Pagination.Next />

@@ -10,7 +10,6 @@ import so3 from './image/so3.png';
 import so4 from './image/so4.png';
 import so5 from './image/so5.png';
 import image1 from './image/image1.png';
-import YouTube from 'react-youtube';
 
 const Rocket = () => {
     // const opts = {
@@ -23,7 +22,7 @@ const Rocket = () => {
     return (
         <div className="page">
             <div className="content page1">
-                <img src={logo2} className="img1" />
+                <img src={logo2} className="img1" alt="" />
                 <span className="text-1 home-wel">SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</span>
                 <Button variant="outline-dark up" href="#info">Learn More</Button>
                 <a className="arrowD"href="#info">
@@ -41,11 +40,11 @@ const Rocket = () => {
                         <h3>Space Exploration Technologies Corp. </h3>
                         <span className="text-1 home-wel">aerospace manufacturer and space transportation services company headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk</span>
                         <div className="social">
-                            <a href="https://twitter.com/spacex" ><img src={so1} className="icon-home"/></a>
+                            <a href="https://twitter.com/spacex" ><img src={so1} className="icon-home" alt="" /></a>
                             <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" ><img src={so2} className="icon-home"/></a>
-                            <a href="https://www.instagram.com/spacex/" ><img src={so3} className="icon-home"/></a>
-                            <a href="https://www.flickr.com/photos/spacex/" ><img src={so4} className="icon-home"/></a>
-                            <a href="https://th.linkedin.com/company/spacex" ><img src={so5} className="icon-home"/></a>
+                            <a href="https://www.instagram.com/spacex/" ><img src={so3} className="icon-home"alt="" /></a>
+                            <a href="https://www.flickr.com/photos/spacex/" ><img src={so4} className="icon-home" alt="" /></a>
+                            <a href="https://th.linkedin.com/company/spacex" ><img src={so5} className="icon-home"alt="" /></a>
                         </div>
                     </Col>
                     <Col md="6" sm="12" className="col-6">
@@ -56,7 +55,7 @@ const Rocket = () => {
             <div className="content page3">
                 <div className="page-content">
                 <Col md="6" sm="12" className="col-6">
-                        <img src={image1} className="img3" />
+                        <img src={image1} className="img3" alt="" />
                     </Col>
                     <Col md="6" sm="12" className="col-6-s">
                         <h2 className="topic">Rocket</h2>
