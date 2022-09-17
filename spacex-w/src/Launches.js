@@ -68,11 +68,15 @@ const Launches = () => {
                             if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear)) {
                                 return launche
                             }
+                            return null
                         } else if (Issuc.value === true || Issuc.value === false) {
                             console.log((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value === launche.launch_success)
                             if ((launche.rocket.rocket_name.toLowerCase().includes(searchTern.toLowerCase())) && launche.launch_year.includes(searchYear) && Issuc.value === launche.launch_success) {
                                 return launche
                             }
+                            return null
+                        } else {
+                            return null
                         }
                     }
                     ).map((launche, key) => (

@@ -10,7 +10,6 @@ import {
 import Home from './Home';
 import Rocket from './Rocket';
 import Launches from './Launches';
-import FC1over from './FC1-1';
 import LaunchesDT from './LaunchesDT';
 import RocketDT from './RocketDT';
 import { useState } from 'react'
@@ -85,9 +84,6 @@ function App() {
           </Route>
           <Route path="/rocket">
             <Rocket />
-          </Route>
-          <Route path="/overview-fc1">
-            <FC1over />
           </Route>
           <Route path="/launches">
             <Launches />

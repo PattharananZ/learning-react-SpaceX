@@ -27,7 +27,7 @@ const RocketDT = () => {
       }
       fetchRockets()
     },
-    [],
+    [id],
   )
   const change = (id) => {
     console.log(id)

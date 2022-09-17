@@ -21,7 +21,7 @@ const LaunchesDT = () => {
       }
       fetchRockets()
     },
-    [],
+    [id],
   )
   if (launches.flight_number == null) {
     return <div></div>;
